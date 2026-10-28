@@ -1,0 +1,248 @@
+{
+  "token_budget": 30000000,
+  "seed": 42,
+  "train_tokens_total": 108540610,
+  "budget_as_pct_of_train": 27.64,
+  "pools": {
+    "eligible": {
+      "docs": 440462,
+      "tokens": 108513275
+    },
+    "quality": {
+      "docs": 428566,
+      "tokens": 105830035
+    }
+  },
+  "strategies": {
+    "random": {
+      "pool": "eligible",
+      "topic": null
+    },
+    "quality": {
+      "pool": "quality",
+      "topic": null
+    },
+    "diversity": {
+      "pool": "quality",
+      "topic": "cluster",
+      "alpha": 0.0
+    },
+    "tail_aware": {
+      "pool": "quality",
+      "topic": "primary_category",
+      "alpha": 0.5
+    },
+    "tail_only": {
+      "pool": "eligible",
+      "topic": "primary_category",
+      "alpha": 0.5
+    }
+  },
+  "reference_full_train": {
+    "docs": 440584,
+    "tokens": 108540610,
+    "mean_tokens_per_doc": 246.4,
+    "token_share_by_group": {
+      "head": 0.7486,
+      "mid": 0.2057,
+      "tail": 0.0457
+    },
+    "upweighting_vs_pool": {
+      "head": 1.0,
+      "mid": 1.0,
+      "tail": 1.0
+    },
+    "categories_with_any_doc": 152,
+    "categories_with_50plus_docs": 107,
+    "tail_categories_covered": "118/118",
+    "effective_categories": 14.21,
+    "effective_themes": 90.03,
+    "smallest_theme_tokens": 106407,
+    "shift_vs_train_categories": 0.0,
+    "shift_vs_train_themes": 0.0,
+    "mean_quality_score": 0.9625,
+    "pct_low_quality": 2.605,
+    "near_dup_docs": 455,
+    "pct_docs_2023_or_later": 60.6,
+    "median_year": 2024
+  },
+  "subsets": {
+    "random": {
+      "docs": 121766,
+      "tokens": 29999918,
+      "mean_tokens_per_doc": 246.4,
+      "token_share_by_group": {
+        "head": 0.7487,
+        "mid": 0.2059,
+        "tail": 0.0454
+      },
+      "upweighting_vs_pool": {
+        "head": 1.0,
+        "mid": 1.001,
+        "tail": 0.993
+      },
+      "categories_with_any_doc": 140,
+      "categories_with_50plus_docs": 71,
+      "tail_categories_covered": "106/118",
+      "effective_categories": 14.15,
+      "effective_themes": 90.07,
+      "smallest_theme_tokens": 29389,
+      "shift_vs_train_categories": 0.0066,
+      "shift_vs_train_themes": 0.0099,
+      "mean_quality_score": 0.9622,
+      "pct_low_quality": 2.657,
+      "near_dup_docs": 131,
+      "pct_docs_2023_or_later": 60.64,
+      "median_year": 2024
+    },
+    "quality": {
+      "docs": 121486,
+      "tokens": 29999935,
+      "mean_tokens_per_doc": 246.9,
+      "token_share_by_group": {
+        "head": 0.749,
+        "mid": 0.2058,
+        "tail": 0.0452
+      },
+      "upweighting_vs_pool": {
+        "head": 1.001,
+        "mid": 1.0,
+        "tail": 0.99
+      },
+      "categories_with_any_doc": 140,
+      "categories_with_50plus_docs": 69,
+      "tail_categories_covered": "106/118",
+      "effective_categories": 14.13,
+      "effective_themes": 89.97,
+      "smallest_theme_tokens": 29526,
+      "shift_vs_train_categories": 0.0065,
+      "shift_vs_train_themes": 0.0112,
+      "mean_quality_score": 0.982,
+      "pct_low_quality": 0.0,
+      "near_dup_docs": 0,
+      "pct_docs_2023_or_later": 60.91,
+      "median_year": 2024
+    },
+    "diversity": {
+      "docs": 122526,
+      "tokens": 29999698,
+      "mean_tokens_per_doc": 244.8,
+      "token_share_by_group": {
+        "head": 0.7617,
+        "mid": 0.1902,
+        "tail": 0.048
+      },
+      "upweighting_vs_pool": {
+        "head": 1.018,
+        "mid": 0.925,
+        "tail": 1.051
+      },
+      "categories_with_any_doc": 145,
+      "categories_with_50plus_docs": 68,
+      "tail_categories_covered": "111/118",
+      "effective_categories": 13.63,
+      "effective_themes": 99.28,
+      "smallest_theme_tokens": 103941,
+      "shift_vs_train_categories": 0.0367,
+      "shift_vs_train_themes": 0.1584,
+      "mean_quality_score": 0.9811,
+      "pct_low_quality": 0.0,
+      "near_dup_docs": 0,
+      "pct_docs_2023_or_later": 58.59,
+      "median_year": 2023
+    },
+    "tail_aware": {
+      "docs": 120408,
+      "tokens": 29999918,
+      "mean_tokens_per_doc": 249.2,
+      "token_share_by_group": {
+        "head": 0.3893,
+        "mid": 0.4502,
+        "tail": 0.1606
+      },
+      "upweighting_vs_pool": {
+        "head": 0.52,
+        "mid": 2.188,
+        "tail": 3.512
+      },
+      "categories_with_any_doc": 151,
+      "categories_with_50plus_docs": 106,
+      "tail_categories_covered": "117/118",
+      "effective_categories": 45.42,
+      "effective_themes": 84.1,
+      "smallest_theme_tokens": 16424,
+      "shift_vs_train_categories": 0.3663,
+      "shift_vs_train_themes": 0.1292,
+      "mean_quality_score": 0.9808,
+      "pct_low_quality": 0.0,
+      "near_dup_docs": 0,
+      "pct_docs_2023_or_later": 58.63,
+      "median_year": 2023
+    },
+    "tail_only": {
+      "docs": 120859,
+      "tokens": 29999854,
+      "mean_tokens_per_doc": 248.2,
+      "token_share_by_group": {
+        "head": 0.3864,
+        "mid": 0.4483,
+        "tail": 0.1654
+      },
+      "upweighting_vs_pool": {
+        "head": 0.516,
+        "mid": 2.179,
+        "tail": 3.618
+      },
+      "categories_with_any_doc": 152,
+      "categories_with_50plus_docs": 107,
+      "tail_categories_covered": "118/118",
+      "effective_categories": 46.1,
+      "effective_themes": 84.21,
+      "smallest_theme_tokens": 16428,
+      "shift_vs_train_categories": 0.3688,
+      "shift_vs_train_themes": 0.13,
+      "mean_quality_score": 0.9596,
+      "pct_low_quality": 2.848,
+      "near_dup_docs": 129,
+      "pct_docs_2023_or_later": 58.21,
+      "median_year": 2023
+    }
+  },
+  "overlap_jaccard": {
+    "random": {
+      "random": 1.0,
+      "quality": 0.948,
+      "diversity": 0.706,
+      "tail_aware": 0.455,
+      "tail_only": 0.461
+    },
+    "quality": {
+      "random": 0.948,
+      "quality": 1.0,
+      "diversity": 0.726,
+      "tail_aware": 0.464,
+      "tail_only": 0.45
+    },
+    "diversity": {
+      "random": 0.706,
+      "quality": 0.726,
+      "diversity": 1.0,
+      "tail_aware": 0.432,
+      "tail_only": 0.42
+    },
+    "tail_aware": {
+      "random": 0.455,
+      "quality": 0.464,
+      "diversity": 0.432,
+      "tail_aware": 1.0,
+      "tail_only": 0.946
+    },
+    "tail_only": {
+      "random": 0.461,
+      "quality": 0.45,
+      "diversity": 0.42,
+      "tail_aware": 0.946,
+      "tail_only": 1.0
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "train_docs": 440584,
+  "settings": {
+    "QUALITY_MIN": 0.5,
+    "MINHASH_PERMS": 128,
+    "MINHASH_BANDS": 32,
+    "DUP_JACCARD": 0.5,
+    "penalties": [
+      [
+        "n_words",
+        "low",
+        80,
+        40
+      ],
+      [
+        "dup_3gram_frac",
+        "high",
+        0.15,
+        0.35
+      ],
+      [
+        "top_2gram_frac",
+        "high",
+        0.1,
+        0.2
+      ],
+      [
+        "symbol_frac",
+        "high",
+        0.005,
+        0.03
+      ],
+      [
+        "latex_cmds",
+        "high",
+        0,
+        6
+      ],
+      [
+        "mean_sentence_words",
+        "high",
+        40,
+        80
+      ],
+      [
+        "mean_sentence_words",
+        "low",
+        10,
+        5
+      ],
+      [
+        "stopword_frac",
+        "low",
+        0.2,
+        0.1
+      ],
+      [
+        "foreign_frac",
+        "high",
+        0.02,
+        0.06
+      ],
+      [
+        "caps_frac",
+        "high",
+        0.12,
+        0.25
+      ]
+    ]
+  },
+  "near_dup": {
+    "verified_pairs_train_train": 472,
+    "train_docs_marked_near_dup": 455,
+    "train_near_dup_clusters": 442,
+    "contaminated_train_docs": 122,
+    "contaminated_by_abstract": 91,
+    "contaminated_by_title": 43,
+    "leak_pairs_with_val": 51,
+    "leak_pairs_with_test": 42,
+    "examples": [
+      {
+        "keep": "0704.3886",
+        "drop": "0708.2303",
+        "jaccard_est": 0.664,
+        "keep_start": "We argue for a compositional semantics grounded in a strongly typed ontology that reflects our commonsense view of the world and the way we talk about it. Assum",
+        "drop_start": "We argue for a compositional semantics grounded in a strongly typed ontology that reflects our commonsense view of the world and the way we talk about it in ord"
+      },
+      {
+        "keep": "1602.07764",
+        "drop": "1705.02553",
+        "jaccard_est": 0.859,
+        "keep_start": "We propose a new reinforcement learning algorithm for partially observable Markov decision processes (POMDP) based on spectral decomposition methods. While spec",
+        "drop_start": "We propose a new reinforcement learning algorithm for partially observable Markov decision processes (POMDP) based on spectral decomposition methods. While spec"
+      },
+      {
+        "keep": "1912.00385",
+        "drop": "2204.01509",
+        "jaccard_est": 0.758,
+        "keep_start": "Deep metric learning has yielded impressive results in tasks such as clustering and image retrieval by leveraging neural networks to obtain highly discriminativ",
+        "drop_start": "Deep metric learning has yielded impressive results in tasks such as clustering and image retrieval by leveraging neural networks to obtain highly discriminativ"
+      },
+      {
+        "keep": "2107.09359",
+        "drop": "2203.03917",
+        "jaccard_est": 0.914,
+        "keep_start": "Reinforcement learning methods for robotics are increasingly successful due to the constant development of better policy gradient techniques. A precise (low var",
+        "drop_start": "Reinforcement learning methods for robotics are increasingly successful due to the constant development of better policy gradient techniques. A precise (low var"
+      },
+      {
+        "keep": "2309.08805",
+        "drop": "2505.04954",
+        "jaccard_est": 0.523,
+        "keep_start": "Identifying a linear system model from data has wide applications in control theory. The existing work on finite sample analysis for linear system identificatio",
+        "drop_start": "The identification of a linear system model from data has wide applications in control theory. The existing work that provides finite sample guarantees for line"
+      }
+    ]
+  },
+  "rule_hits": {
+    "n_words:low": {
+      "any_penalty_pct": 2.242,
+      "full_penalty_pct": 0.179
+    },
+    "dup_3gram_frac:high": {
+      "any_penalty_pct": 3.621,
+      "full_penalty_pct": 0.07
+    },
+    "top_2gram_frac:high": {
+      "any_penalty_pct": 0.649,
+      "full_penalty_pct": 0.007
+    },
+    "symbol_frac:high": {
+      "any_penalty_pct": 2.802,
+      "full_penalty_pct": 0.04
+    },
+    "latex_cmds:high": {
+      "any_penalty_pct": 4.514,
+      "full_penalty_pct": 0.327
+    },
+    "mean_sentence_words:high": {
+      "any_penalty_pct": 0.742,
+      "full_penalty_pct": 0.039
+    },
+    "mean_sentence_words:low": {
+      "any_penalty_pct": 0.006,
+      "full_penalty_pct": 0.0
+    },
+    "stopword_frac:low": {
+      "any_penalty_pct": 0.047,
+      "full_penalty_pct": 0.0
+    },
+    "foreign_frac:high": {
+      "any_penalty_pct": 0.014,
+      "full_penalty_pct": 0.005
+    },
+    "caps_frac:high": {
+      "any_penalty_pct": 0.133,
+      "full_penalty_pct": 0.0
+    }
+  },
+  "quality_score": {
+    "pct_perfect": 88.24,
+    "pct_below_min": 2.61,
+    "percentiles": {
+      "0.01": 0.1479,
+      "0.05": 0.734,
+      "0.1": 0.93,
+      "0.25": 1.0,
+      "0.5": 1.0
+    }
+  },
+  "by_group": {
+    "head": {
+      "docs": 332367,
+      "low_quality_pct": 2.535,
+      "near_dup_pct": 0.107,
+      "contaminated_pct": 0.032,
+      "removed_by_filter_pct": 2.636
+    },
+    "mid": {
+      "docs": 88242,
+      "low_quality_pct": 2.621,
+      "near_dup_pct": 0.095,
+      "contaminated_pct": 0.015,
+      "removed_by_filter_pct": 2.707
+    },
+    "tail": {
+      "docs": 19975,
+      "low_quality_pct": 3.695,
+      "near_dup_pct": 0.07,
+      "contaminated_pct": 0.02,
+      "removed_by_filter_pct": 3.765
+    }
+  },
+  "quality_pool_docs": 428566,
+  "eligible_pool_docs": 440462,
+  "signal_percentiles": {
+    "n_words": {
+      "0.01": 65.0,
+      "0.5": 171.0,
+      "0.99": 279.0
+    },
+    "math_frac": {
+      "0.01": 0.0,
+      "0.5": 0.0,
+      "0.99": 0.0893
+    },
+    "symbol_frac": {
+      "0.01": 0.0,
+      "0.5": 0.0,
+      "0.99": 0.0098
+    },
+    "latex_cmds": {
+      "0.01": 0.0,
+      "0.5": 0.0,
+      "0.99": 3.0
+    },
+    "urls": {
+      "0.01": 0.0,
+      "0.5": 0.0,
+      "0.99": 1.0
+    },
+    "non_ascii_frac": {
+      "0.01": 0.0,
+      "0.5": 0.0,
+      "0.99": 0.0
+    },
+    "stopword_frac": {
+      "0.01": 0.244,
+      "0.5": 0.3735,
+      "0.99": 0.5034
+    },
+    "foreign_frac": {
+      "0.01": 0.0,
+      "0.5": 0.0,
+      "0.99": 0.0
+    },
+    "mean_word_len": {
+      "0.01": 4.8684,
+      "0.5": 5.7426,
+      "0.99": 6.7816
+    },
+    "caps_frac": {
+      "0.01": 0.0,
+      "0.5": 0.0155,
+      "0.99": 0.0877
+    },
+    "dup_3gram_frac": {
+      "0.01": 0.0,
+      "0.5": 0.0216,
+      "0.99": 0.211
+    },
+    "top_2gram_frac": {
+      "0.01": 0.0,
+      "0.5": 0.0248,
+      "0.99": 0.0927
+    },
+    "n_sentences": {
+      "0.01": 3.0,
+      "0.5": 7.0,
+      "0.99": 13.0
+    },
+    "mean_sentence_words": {
+      "0.01": 15.2222,
+      "0.5": 23.1111,
+      "0.99": 38.75
+    }
+  }
+}

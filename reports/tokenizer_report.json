@@ -1,0 +1,110 @@
+{
+  "train_docs": 440584,
+  "special_tokens": [
+    "<|endoftext|>",
+    "<|pad|>"
+  ],
+  "vocab_comparison": {
+    "train_sample_docs": 100000,
+    "rows": [
+      {
+        "vocab_size": 8192,
+        "val_tokens_per_word": 1.4637,
+        "embedding_params_d384": 3145728,
+        "train_seconds": 22.7
+      },
+      {
+        "vocab_size": 16384,
+        "val_tokens_per_word": 1.3474,
+        "embedding_params_d384": 6291456,
+        "train_seconds": 29.0
+      },
+      {
+        "vocab_size": 32768,
+        "val_tokens_per_word": 1.2946,
+        "embedding_params_d384": 12582912,
+        "train_seconds": 25.3
+      }
+    ]
+  },
+  "final_train_seconds": 88.7,
+  "vocab_size": 16384,
+  "eot_id": 0,
+  "pad_id": 1,
+  "train_tokens": 108100026,
+  "train_tokens_per_word": 1.3464,
+  "val_tokens": 5964729,
+  "val_tokens_per_word": 1.3471,
+  "test_tokens": 6067142,
+  "test_tokens_per_word": 1.3485,
+  "val_tokens_per_word_by_group": {
+    "head": 1.3447,
+    "mid": 1.3513,
+    "tail": 1.3707
+  },
+  "example": {
+    "text": "A Note on the Inapproximability of Correlation Clustering\n\nWe consider inapproximability of the correlation clustering problem defined as follows: Given a graph $G = (V,E)$ where each edge is labeled either \"+\" (similar) or \"-\" (dissimilar), correlation clustering seeks to partition the vertices int",
+    "tokens": [
+      "A",
+      "\u0120Note",
+      "\u0120on",
+      "\u0120the",
+      "\u0120In",
+      "approxim",
+      "ability",
+      "\u0120of",
+      "\u0120Correlation",
+      "\u0120Clustering",
+      "\u010a",
+      "\u010a",
+      "We",
+      "\u0120consider",
+      "\u0120in",
+      "approxim",
+      "ability",
+      "\u0120of",
+      "\u0120the",
+      "\u0120correlation",
+      "\u0120clustering",
+      "\u0120problem",
+      "\u0120defined",
+      "\u0120as",
+      "\u0120follows",
+      ":",
+      "\u0120Given",
+      "\u0120a",
+      "\u0120graph",
+      "\u0120$",
+      "G",
+      "\u0120=",
+      "\u0120(",
+      "V",
+      ",",
+      "E",
+      ")$",
+      "\u0120where",
+      "\u0120each",
+      "\u0120edge",
+      "\u0120is",
+      "\u0120labeled",
+      "\u0120either",
+      "\u0120\"",
+      "+",
+      "\"",
+      "\u0120(",
+      "sim",
+      "ilar",
+      ")",
+      "\u0120or",
+      "\u0120\"",
+      "-",
+      "\"",
+      "\u0120(",
+      "d",
+      "iss",
+      "im",
+      "ilar",
+      "),"
+    ]
+  }
+}

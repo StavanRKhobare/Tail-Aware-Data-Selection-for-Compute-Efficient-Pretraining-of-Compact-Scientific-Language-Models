@@ -1,0 +1,2186 @@
+{
+  "groups": {
+    "definition": "head >= 10,000 train docs per primary category, mid >= 1,000, tail below",
+    "categories_per_group": {
+      "head": 6,
+      "mid": 28,
+      "tail": 118
+    },
+    "docs_per_group": {
+      "train": {
+        "head": 332367,
+        "mid": 88242,
+        "tail": 19975
+      },
+      "val": {
+        "head": 18575,
+        "mid": 4752,
+        "tail": 1074
+      },
+      "test": {
+        "head": 18592,
+        "mid": 4954,
+        "tail": 1145
+      }
+    },
+    "head_categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.CV",
+      "cs.LG",
+      "cs.RO",
+      "stat.ML"
+    ],
+    "mid_categories": [
+      "cs.AR",
+      "cs.CR",
+      "cs.CY",
+      "cs.DB",
+      "cs.DC",
+      "cs.DS",
+      "cs.GT",
+      "cs.HC",
+      "cs.IR",
+      "cs.IT",
+      "cs.LO",
+      "cs.MA",
+      "cs.NE",
+      "cs.NI",
+      "cs.SD",
+      "cs.SE",
+      "cs.SI",
+      "eess.AS",
+      "eess.IV",
+      "eess.SP",
+      "eess.SY",
+      "math.NA",
+      "math.OC",
+      "math.ST",
+      "q-bio.NC",
+      "q-bio.QM",
+      "quant-ph",
+      "stat.ME"
+    ]
+  },
+  "clusters": {
+    "method": "TF-IDF (50k unigrams, math removed) -> SVD 100 -> KMeans k=1000 -> KMeans k=100 on the fine centroids (themes)",
+    "train_docs_per_cluster": {
+      "min": 478,
+      "median": 4154,
+      "max": 11055
+    },
+    "train_docs_per_fine_cluster": {
+      "min": 140,
+      "median": 425,
+      "max": 1078
+    },
+    "svd_explained_variance": 0.1073,
+    "clusters": [
+      {
+        "cluster": 3,
+        "train_docs": 11055,
+        "fine_clusters": 22,
+        "top_terms": [
+          "ai",
+          "intelligence",
+          "artificial",
+          "human",
+          "systems",
+          "research",
+          "generative",
+          "development"
+        ],
+        "top_categories": {
+          "cs.AI": 0.315,
+          "cs.CY": 0.181,
+          "cs.HC": 0.12
+        },
+        "tail_share": 0.053
+      },
+      {
+        "cluster": 14,
+        "train_docs": 10877,
+        "fine_clusters": 24,
+        "top_terms": [
+          "graph",
+          "graphs",
+          "node",
+          "networks",
+          "neural",
+          "gnns",
+          "nodes",
+          "gnn"
+        ],
+        "top_categories": {
+          "cs.LG": 0.646,
+          "cs.AI": 0.05,
+          "stat.ML": 0.05
+        },
+        "tail_share": 0.04
+      },
+      {
+        "cluster": 20,
+        "train_docs": 10051,
+        "fine_clusters": 22,
+        "top_terms": [
+          "agent",
+          "agents",
+          "llm",
+          "multi",
+          "language",
+          "task",
+          "ai",
+          "framework"
+        ],
+        "top_categories": {
+          "cs.AI": 0.473,
+          "cs.CL": 0.168,
+          "cs.SE": 0.086
+        },
+        "tail_share": 0.021
+      },
+      {
+        "cluster": 24,
+        "train_docs": 9932,
+        "fine_clusters": 23,
+        "top_terms": [
+          "policy",
+          "reinforcement",
+          "rl",
+          "learning",
+          "policies",
+          "control",
+          "reward",
+          "algorithm"
+        ],
+        "top_categories": {
+          "cs.LG": 0.66,
+          "cs.AI": 0.088,
+          "cs.RO": 0.054
+        },
+        "tail_share": 0.021
+      },
+      {
+        "cluster": 36,
+        "train_docs": 9869,
+        "fine_clusters": 19,
+        "top_terms": [
+          "speech",
+          "recognition",
+          "audio",
+          "asr",
+          "speaker",
+          "model",
+          "text",
+          "automatic"
+        ],
+        "top_categories": {
+          "cs.CL": 0.378,
+          "cs.SD": 0.259,
+          "eess.AS": 0.248
+        },
+        "tail_share": 0.012
+      },
+      {
+        "cluster": 10,
+        "train_docs": 8743,
+        "fine_clusters": 19,
+        "top_terms": [
+          "llms",
+          "language",
+          "llm",
+          "large",
+          "models",
+          "model",
+          "tasks",
+          "generation"
+        ],
+        "top_categories": {
+          "cs.CL": 0.519,
+          "cs.LG": 0.12,
+          "cs.AI": 0.111
+        },
+        "tail_share": 0.023
+      },
+      {
+        "cluster": 52,
+        "train_docs": 7377,
+        "fine_clusters": 18,
+        "top_terms": [
+          "llms",
+          "evaluation",
+          "llm",
+          "language",
+          "models",
+          "large",
+          "human",
+          "benchmark"
+        ],
+        "top_categories": {
+          "cs.CL": 0.528,
+          "cs.AI": 0.131,
+          "cs.LG": 0.096
+        },
+        "tail_share": 0.02
+      },
+      {
+        "cluster": 89,
+        "train_docs": 7293,
+        "fine_clusters": 16,
+        "top_terms": [
+          "inference",
+          "memory",
+          "energy",
+          "efficient",
+          "deep",
+          "devices",
+          "time",
+          "edge"
+        ],
+        "top_categories": {
+          "cs.LG": 0.322,
+          "cs.DC": 0.121,
+          "cs.AR": 0.076
+        },
+        "tail_share": 0.053
+      },
+      {
+        "cluster": 2,
+        "train_docs": 6868,
+        "fine_clusters": 16,
+        "top_terms": [
+          "visual",
+          "multimodal",
+          "image",
+          "language",
+          "vision",
+          "models",
+          "reasoning",
+          "text"
+        ],
+        "top_categories": {
+          "cs.CV": 0.565,
+          "cs.CL": 0.19,
+          "cs.AI": 0.13
+        },
+        "tail_share": 0.009
+      },
+      {
+        "cluster": 28,
+        "train_docs": 6465,
+        "fine_clusters": 13,
+        "top_terms": [
+          "robot",
+          "control",
+          "policy",
+          "real",
+          "tasks",
+          "world",
+          "learning",
+          "action"
+        ],
+        "top_categories": {
+          "cs.RO": 0.755,
+          "cs.LG": 0.099,
+          "cs.AI": 0.076
+        },
+        "tail_share": 0.006
+      },
+      {
+        "cluster": 43,
+        "train_docs": 6384,
+        "fine_clusters": 13,
+        "top_terms": [
+          "detection",
+          "anomaly",
+          "data",
+          "based",
+          "learning",
+          "time",
+          "detect",
+          "detecting"
+        ],
+        "top_categories": {
+          "cs.LG": 0.396,
+          "cs.CR": 0.171,
+          "cs.CV": 0.09
+        },
+        "tail_share": 0.033
+      },
+      {
+        "cluster": 7,
+        "train_docs": 6347,
+        "fine_clusters": 16,
+        "top_terms": [
+          "reasoning",
+          "llms",
+          "language",
+          "models",
+          "large",
+          "llm",
+          "tasks",
+          "thought"
+        ],
+        "top_categories": {
+          "cs.CL": 0.516,
+          "cs.AI": 0.298,
+          "cs.LG": 0.114
+        },
+        "tail_share": 0.009
+      },
+      {
+        "cluster": 44,
+        "train_docs": 6124,
+        "fine_clusters": 14,
+        "top_terms": [
+          "neural",
+          "networks",
+          "network",
+          "data",
+          "learning",
+          "deep",
+          "model",
+          "based"
+        ],
+        "top_categories": {
+          "cs.LG": 0.397,
+          "cs.NE": 0.094,
+          "cs.AI": 0.079
+        },
+        "tail_share": 0.114
+      },
+      {
+        "cluster": 62,
+        "train_docs": 6054,
+        "fine_clusters": 12,
+        "top_terms": [
+          "agent",
+          "agents",
+          "multi",
+          "reinforcement",
+          "learning",
+          "game",
+          "environment",
+          "human"
+        ],
+        "top_categories": {
+          "cs.AI": 0.358,
+          "cs.LG": 0.252,
+          "cs.MA": 0.119
+        },
+        "tail_share": 0.028
+      },
+      {
+        "cluster": 33,
+        "train_docs": 5923,
+        "fine_clusters": 15,
+        "top_terms": [
+          "retrieval",
+          "rag",
+          "generation",
+          "augmented",
+          "query",
+          "knowledge",
+          "search",
+          "llms"
+        ],
+        "top_categories": {
+          "cs.CL": 0.444,
+          "cs.IR": 0.234,
+          "cs.AI": 0.133
+        },
+        "tail_share": 0.012
+      },
+      {
+        "cluster": 65,
+        "train_docs": 5825,
+        "fine_clusters": 12,
+        "top_terms": [
+          "supervised",
+          "self",
+          "learning",
+          "data",
+          "labels",
+          "label",
+          "semi",
+          "labeled"
+        ],
+        "top_categories": {
+          "cs.LG": 0.401,
+          "cs.CV": 0.281,
+          "cs.CL": 0.104
+        },
+        "tail_share": 0.016
+      },
+      {
+        "cluster": 1,
+        "train_docs": 5779,
+        "fine_clusters": 12,
+        "top_terms": [
+          "search",
+          "optimization",
+          "algorithm",
+          "space",
+          "problem",
+          "problems",
+          "design",
+          "bayesian"
+        ],
+        "top_categories": {
+          "cs.LG": 0.372,
+          "cs.AI": 0.23,
+          "cs.NE": 0.089
+        },
+        "tail_share": 0.067
+      },
+      {
+        "cluster": 94,
+        "train_docs": 5774,
+        "fine_clusters": 11,
+        "top_terms": [
+          "federated",
+          "fl",
+          "clients",
+          "learning",
+          "privacy",
+          "client",
+          "local",
+          "data"
+        ],
+        "top_categories": {
+          "cs.LG": 0.739,
+          "cs.CR": 0.051,
+          "cs.DC": 0.042
+        },
+        "tail_share": 0.003
+      },
+      {
+        "cluster": 8,
+        "train_docs": 5692,
+        "fine_clusters": 13,
+        "top_terms": [
+          "estimation",
+          "regression",
+          "linear",
+          "gaussian",
+          "kernel",
+          "data",
+          "sample",
+          "error"
+        ],
+        "top_categories": {
+          "stat.ML": 0.329,
+          "cs.LG": 0.249,
+          "math.ST": 0.133
+        },
+        "tail_share": 0.071
+      },
+      {
+        "cluster": 23,
+        "train_docs": 5691,
+        "fine_clusters": 12,
+        "top_terms": [
+          "gradient",
+          "optimization",
+          "convergence",
+          "stochastic",
+          "algorithm",
+          "convex",
+          "problems",
+          "descent"
+        ],
+        "top_categories": {
+          "cs.LG": 0.367,
+          "math.OC": 0.32,
+          "stat.ML": 0.146
+        },
+        "tail_share": 0.036
+      },
+      {
+        "cluster": 51,
+        "train_docs": 5573,
+        "fine_clusters": 12,
+        "top_terms": [
+          "bayesian",
+          "inference",
+          "posterior",
+          "variational",
+          "distribution",
+          "sampling",
+          "gaussian",
+          "model"
+        ],
+        "top_categories": {
+          "stat.ML": 0.308,
+          "cs.LG": 0.292,
+          "cs.AI": 0.129
+        },
+        "tail_share": 0.121
+      },
+      {
+        "cluster": 56,
+        "train_docs": 5537,
+        "fine_clusters": 13,
+        "top_terms": [
+          "machine",
+          "learning",
+          "data",
+          "ml",
+          "model",
+          "models",
+          "algorithms",
+          "using"
+        ],
+        "top_categories": {
+          "cs.LG": 0.413,
+          "cs.SE": 0.089,
+          "cs.AI": 0.044
+        },
+        "tail_share": 0.161
+      },
+      {
+        "cluster": 87,
+        "train_docs": 5483,
+        "fine_clusters": 13,
+        "top_terms": [
+          "diffusion",
+          "generation",
+          "models",
+          "generative",
+          "image",
+          "model",
+          "quality",
+          "sampling"
+        ],
+        "top_categories": {
+          "cs.LG": 0.362,
+          "cs.CV": 0.36,
+          "cs.CL": 0.065
+        },
+        "tail_share": 0.069
+      },
+      {
+        "cluster": 93,
+        "train_docs": 5422,
+        "fine_clusters": 12,
+        "top_terms": [
+          "clinical",
+          "medical",
+          "patient",
+          "health",
+          "learning",
+          "data",
+          "disease",
+          "patients"
+        ],
+        "top_categories": {
+          "cs.LG": 0.416,
+          "cs.CV": 0.115,
+          "eess.IV": 0.113
+        },
+        "tail_share": 0.045
+      },
+      {
+        "cluster": 68,
+        "train_docs": 5234,
+        "fine_clusters": 9,
+        "top_terms": [
+          "adversarial",
+          "attacks",
+          "attack",
+          "robustness",
+          "robust",
+          "examples",
+          "perturbations",
+          "defense"
+        ],
+        "top_categories": {
+          "cs.LG": 0.498,
+          "cs.CV": 0.195,
+          "cs.CR": 0.124
+        },
+        "tail_share": 0.004
+      },
+      {
+        "cluster": 54,
+        "train_docs": 5233,
+        "fine_clusters": 12,
+        "top_terms": [
+          "user",
+          "users",
+          "recommendation",
+          "systems",
+          "recommender",
+          "item",
+          "items",
+          "based"
+        ],
+        "top_categories": {
+          "cs.IR": 0.498,
+          "cs.LG": 0.156,
+          "cs.CL": 0.085
+        },
+        "tail_share": 0.012
+      },
+      {
+        "cluster": 9,
+        "train_docs": 5188,
+        "fine_clusters": 13,
+        "top_terms": [
+          "attention",
+          "transformer",
+          "models",
+          "model",
+          "language",
+          "transformers",
+          "training",
+          "layer"
+        ],
+        "top_categories": {
+          "cs.LG": 0.498,
+          "cs.CL": 0.286,
+          "cs.AI": 0.054
+        },
+        "tail_share": 0.019
+      },
+      {
+        "cluster": 90,
+        "train_docs": 5153,
+        "fine_clusters": 11,
+        "top_terms": [
+          "text",
+          "task",
+          "dataset",
+          "entity",
+          "extraction",
+          "document",
+          "information",
+          "model"
+        ],
+        "top_categories": {
+          "cs.CL": 0.811,
+          "cs.IR": 0.045,
+          "cs.AI": 0.037
+        },
+        "tail_share": 0.019
+      },
+      {
+        "cluster": 70,
+        "train_docs": 5122,
+        "fine_clusters": 10,
+        "top_terms": [
+          "regret",
+          "algorithm",
+          "online",
+          "bound",
+          "bandit",
+          "algorithms",
+          "optimal",
+          "bounds"
+        ],
+        "top_categories": {
+          "cs.LG": 0.625,
+          "stat.ML": 0.142,
+          "cs.GT": 0.086
+        },
+        "tail_share": 0.011
+      },
+      {
+        "cluster": 37,
+        "train_docs": 4963,
+        "fine_clusters": 11,
+        "top_terms": [
+          "languages",
+          "multilingual",
+          "language",
+          "english",
+          "cross",
+          "lingual",
+          "resource",
+          "translation"
+        ],
+        "top_categories": {
+          "cs.CL": 0.909,
+          "cs.AI": 0.017,
+          "cs.IR": 0.011
+        },
+        "tail_share": 0.021
+      },
+      {
+        "cluster": 57,
+        "train_docs": 4747,
+        "fine_clusters": 10,
+        "top_terms": [
+          "image",
+          "generative",
+          "images",
+          "adversarial",
+          "generation",
+          "gan",
+          "using",
+          "training"
+        ],
+        "top_categories": {
+          "cs.CV": 0.416,
+          "cs.LG": 0.258,
+          "eess.IV": 0.071
+        },
+        "tail_share": 0.052
+      },
+      {
+        "cluster": 88,
+        "train_docs": 4720,
+        "fine_clusters": 11,
+        "top_terms": [
+          "reasoning",
+          "information",
+          "logic",
+          "knowledge",
+          "semantic",
+          "set",
+          "paper",
+          "framework"
+        ],
+        "top_categories": {
+          "cs.AI": 0.481,
+          "cs.CL": 0.129,
+          "cs.LO": 0.106
+        },
+        "tail_share": 0.104
+      },
+      {
+        "cluster": 25,
+        "train_docs": 4705,
+        "fine_clusters": 10,
+        "top_terms": [
+          "social",
+          "media",
+          "analysis",
+          "detection",
+          "dataset",
+          "online",
+          "sentiment",
+          "content"
+        ],
+        "top_categories": {
+          "cs.CL": 0.601,
+          "cs.SI": 0.159,
+          "cs.CY": 0.052
+        },
+        "tail_share": 0.026
+      },
+      {
+        "cluster": 22,
+        "train_docs": 4620,
+        "fine_clusters": 10,
+        "top_terms": [
+          "causal",
+          "variables",
+          "inference",
+          "effect",
+          "data",
+          "effects",
+          "discovery",
+          "estimation"
+        ],
+        "top_categories": {
+          "cs.LG": 0.395,
+          "stat.ML": 0.165,
+          "cs.AI": 0.153
+        },
+        "tail_share": 0.046
+      },
+      {
+        "cluster": 38,
+        "train_docs": 4597,
+        "fine_clusters": 10,
+        "top_terms": [
+          "privacy",
+          "private",
+          "data",
+          "differential",
+          "dp",
+          "differentially",
+          "preserving",
+          "utility"
+        ],
+        "top_categories": {
+          "cs.LG": 0.473,
+          "cs.CR": 0.263,
+          "cs.CL": 0.057
+        },
+        "tail_share": 0.005
+      },
+      {
+        "cluster": 42,
+        "train_docs": 4565,
+        "fine_clusters": 10,
+        "top_terms": [
+          "explanations",
+          "explanation",
+          "ai",
+          "explainable",
+          "decision",
+          "models",
+          "model",
+          "based"
+        ],
+        "top_categories": {
+          "cs.LG": 0.41,
+          "cs.AI": 0.184,
+          "cs.CV": 0.117
+        },
+        "tail_share": 0.018
+      },
+      {
+        "cluster": 27,
+        "train_docs": 4562,
+        "fine_clusters": 9,
+        "top_terms": [
+          "neural",
+          "physics",
+          "equations",
+          "differential",
+          "problems",
+          "networks",
+          "dynamics",
+          "informed"
+        ],
+        "top_categories": {
+          "cs.LG": 0.553,
+          "math.NA": 0.125,
+          "stat.ML": 0.052
+        },
+        "tail_share": 0.17
+      },
+      {
+        "cluster": 64,
+        "train_docs": 4488,
+        "fine_clusters": 11,
+        "top_terms": [
+          "clustering",
+          "algorithm",
+          "data",
+          "cluster",
+          "clusters",
+          "based",
+          "algorithms",
+          "means"
+        ],
+        "top_categories": {
+          "cs.LG": 0.448,
+          "stat.ML": 0.139,
+          "cs.CV": 0.057
+        },
+        "tail_share": 0.058
+      },
+      {
+        "cluster": 19,
+        "train_docs": 4488,
+        "fine_clusters": 10,
+        "top_terms": [
+          "image",
+          "images",
+          "segmentation",
+          "medical",
+          "deep",
+          "imaging",
+          "clinical",
+          "learning"
+        ],
+        "top_categories": {
+          "eess.IV": 0.43,
+          "cs.CV": 0.423,
+          "cs.LG": 0.05
+        },
+        "tail_share": 0.044
+      },
+      {
+        "cluster": 21,
+        "train_docs": 4483,
+        "fine_clusters": 10,
+        "top_terms": [
+          "time",
+          "series",
+          "forecasting",
+          "data",
+          "temporal",
+          "models",
+          "real",
+          "multivariate"
+        ],
+        "top_categories": {
+          "cs.LG": 0.701,
+          "stat.ML": 0.07,
+          "cs.AI": 0.047
+        },
+        "tail_share": 0.068
+      },
+      {
+        "cluster": 75,
+        "train_docs": 4481,
+        "fine_clusters": 11,
+        "top_terms": [
+          "neural",
+          "networks",
+          "network",
+          "deep",
+          "function",
+          "functions",
+          "layer",
+          "linear"
+        ],
+        "top_categories": {
+          "cs.LG": 0.667,
+          "stat.ML": 0.142,
+          "cs.NE": 0.027
+        },
+        "tail_share": 0.066
+      },
+      {
+        "cluster": 91,
+        "train_docs": 4426,
+        "fine_clusters": 11,
+        "top_terms": [
+          "question",
+          "answering",
+          "questions",
+          "answer",
+          "qa",
+          "answers",
+          "language",
+          "dataset"
+        ],
+        "top_categories": {
+          "cs.CL": 0.707,
+          "cs.CV": 0.086,
+          "cs.AI": 0.085
+        },
+        "tail_share": 0.007
+      },
+      {
+        "cluster": 39,
+        "train_docs": 4398,
+        "fine_clusters": 9,
+        "top_terms": [
+          "research",
+          "survey",
+          "future",
+          "review",
+          "challenges",
+          "learning",
+          "methods",
+          "recent"
+        ],
+        "top_categories": {
+          "cs.CL": 0.239,
+          "cs.LG": 0.231,
+          "cs.AI": 0.089
+        },
+        "tail_share": 0.074
+      },
+      {
+        "cluster": 0,
+        "train_docs": 4394,
+        "fine_clusters": 11,
+        "top_terms": [
+          "word",
+          "text",
+          "language",
+          "embeddings",
+          "semantic",
+          "words",
+          "model",
+          "analysis"
+        ],
+        "top_categories": {
+          "cs.CL": 0.807,
+          "cs.LG": 0.039,
+          "cs.IR": 0.035
+        },
+        "tail_share": 0.044
+      },
+      {
+        "cluster": 5,
+        "train_docs": 4350,
+        "fine_clusters": 11,
+        "top_terms": [
+          "reinforcement",
+          "learning",
+          "rl",
+          "agent",
+          "policy",
+          "agents",
+          "reward",
+          "deep"
+        ],
+        "top_categories": {
+          "cs.LG": 0.537,
+          "cs.AI": 0.211,
+          "cs.RO": 0.054
+        },
+        "tail_share": 0.041
+      },
+      {
+        "cluster": 80,
+        "train_docs": 4305,
+        "fine_clusters": 11,
+        "top_terms": [
+          "object",
+          "image",
+          "images",
+          "segmentation",
+          "semantic",
+          "objects",
+          "data",
+          "dataset"
+        ],
+        "top_categories": {
+          "cs.CV": 0.708,
+          "cs.RO": 0.081,
+          "cs.LG": 0.064
+        },
+        "tail_share": 0.041
+      },
+      {
+        "cluster": 34,
+        "train_docs": 4299,
+        "fine_clusters": 11,
+        "top_terms": [
+          "code",
+          "github",
+          "https",
+          "com",
+          "available",
+          "models",
+          "model",
+          "training"
+        ],
+        "top_categories": {
+          "cs.LG": 0.275,
+          "cs.CV": 0.274,
+          "cs.CL": 0.224
+        },
+        "tail_share": 0.03
+      },
+      {
+        "cluster": 12,
+        "train_docs": 4276,
+        "fine_clusters": 9,
+        "top_terms": [
+          "deep",
+          "learning",
+          "neural",
+          "networks",
+          "data",
+          "network",
+          "training",
+          "model"
+        ],
+        "top_categories": {
+          "cs.LG": 0.4,
+          "cs.CV": 0.125,
+          "cs.CL": 0.076
+        },
+        "tail_share": 0.111
+      },
+      {
+        "cluster": 47,
+        "train_docs": 4197,
+        "fine_clusters": 10,
+        "top_terms": [
+          "fine",
+          "tuning",
+          "models",
+          "model",
+          "pre",
+          "training",
+          "language",
+          "tasks"
+        ],
+        "top_categories": {
+          "cs.CL": 0.417,
+          "cs.LG": 0.351,
+          "cs.CV": 0.078
+        },
+        "tail_share": 0.015
+      },
+      {
+        "cluster": 29,
+        "train_docs": 4186,
+        "fine_clusters": 10,
+        "top_terms": [
+          "uncertainty",
+          "prediction",
+          "distribution",
+          "estimation",
+          "predictions",
+          "model",
+          "confidence",
+          "bayesian"
+        ],
+        "top_categories": {
+          "cs.LG": 0.444,
+          "stat.ML": 0.123,
+          "cs.CL": 0.105
+        },
+        "tail_share": 0.059
+      },
+      {
+        "cluster": 55,
+        "train_docs": 4123,
+        "fine_clusters": 11,
+        "top_terms": [
+          "fairness",
+          "bias",
+          "biases",
+          "fair",
+          "group",
+          "groups",
+          "machine",
+          "models"
+        ],
+        "top_categories": {
+          "cs.LG": 0.404,
+          "cs.CL": 0.232,
+          "cs.CY": 0.083
+        },
+        "tail_share": 0.014
+      },
+      {
+        "cluster": 35,
+        "train_docs": 4077,
+        "fine_clusters": 10,
+        "top_terms": [
+          "attacks",
+          "attack",
+          "adversarial",
+          "models",
+          "llms",
+          "safety",
+          "llm",
+          "language"
+        ],
+        "top_categories": {
+          "cs.CR": 0.493,
+          "cs.LG": 0.182,
+          "cs.CL": 0.149
+        },
+        "tail_share": 0.001
+      },
+      {
+        "cluster": 98,
+        "train_docs": 4072,
+        "fine_clusters": 11,
+        "top_terms": [
+          "video",
+          "temporal",
+          "videos",
+          "visual",
+          "frames",
+          "audio",
+          "object",
+          "motion"
+        ],
+        "top_categories": {
+          "cs.CV": 0.77,
+          "cs.CL": 0.044,
+          "cs.AI": 0.038
+        },
+        "tail_share": 0.027
+      },
+      {
+        "cluster": 46,
+        "train_docs": 4060,
+        "fine_clusters": 11,
+        "top_terms": [
+          "model",
+          "models",
+          "training",
+          "language",
+          "llm",
+          "evaluation",
+          "level",
+          "token"
+        ],
+        "top_categories": {
+          "cs.LG": 0.34,
+          "cs.CL": 0.235,
+          "cs.AI": 0.195
+        },
+        "tail_share": 0.029
+      },
+      {
+        "cluster": 48,
+        "train_docs": 3988,
+        "fine_clusters": 9,
+        "top_terms": [
+          "gradient",
+          "stochastic",
+          "descent",
+          "training",
+          "convergence",
+          "optimization",
+          "networks",
+          "neural"
+        ],
+        "top_categories": {
+          "cs.LG": 0.69,
+          "stat.ML": 0.129,
+          "math.OC": 0.063
+        },
+        "tail_share": 0.018
+      },
+      {
+        "cluster": 31,
+        "train_docs": 3950,
+        "fine_clusters": 9,
+        "top_terms": [
+          "forecasting",
+          "prediction",
+          "series",
+          "time",
+          "temporal",
+          "model",
+          "data",
+          "long"
+        ],
+        "top_categories": {
+          "cs.LG": 0.595,
+          "cs.AI": 0.051,
+          "physics.ao-ph": 0.05
+        },
+        "tail_share": 0.194
+      },
+      {
+        "cluster": 61,
+        "train_docs": 3829,
+        "fine_clusters": 7,
+        "top_terms": [
+          "translation",
+          "machine",
+          "english",
+          "languages",
+          "neural",
+          "language",
+          "quality",
+          "nmt"
+        ],
+        "top_categories": {
+          "cs.CL": 0.929,
+          "cmp-lg": 0.015,
+          "cs.LG": 0.015
+        },
+        "tail_share": 0.018
+      },
+      {
+        "cluster": 60,
+        "train_docs": 3822,
+        "fine_clusters": 8,
+        "top_terms": [
+          "domain",
+          "target",
+          "adaptation",
+          "domains",
+          "source",
+          "data",
+          "transfer",
+          "learning"
+        ],
+        "top_categories": {
+          "cs.LG": 0.385,
+          "cs.CV": 0.288,
+          "cs.CL": 0.13
+        },
+        "tail_share": 0.013
+      },
+      {
+        "cluster": 15,
+        "train_docs": 3764,
+        "fine_clusters": 10,
+        "top_terms": [
+          "data",
+          "prediction",
+          "analysis",
+          "model",
+          "temporal",
+          "approach",
+          "using",
+          "learning"
+        ],
+        "top_categories": {
+          "cs.LG": 0.355,
+          "cs.AI": 0.121,
+          "cs.CV": 0.073
+        },
+        "tail_share": 0.13
+      },
+      {
+        "cluster": 97,
+        "train_docs": 3729,
+        "fine_clusters": 9,
+        "top_terms": [
+          "autonomous",
+          "driving",
+          "safety",
+          "systems",
+          "traffic",
+          "vehicle",
+          "vehicles",
+          "control"
+        ],
+        "top_categories": {
+          "cs.RO": 0.327,
+          "cs.CV": 0.192,
+          "cs.LG": 0.158
+        },
+        "tail_share": 0.01
+      },
+      {
+        "cluster": 58,
+        "train_docs": 3722,
+        "fine_clusters": 9,
+        "top_terms": [
+          "attention",
+          "features",
+          "feature",
+          "transformer",
+          "image",
+          "multi",
+          "based",
+          "network"
+        ],
+        "top_categories": {
+          "cs.CV": 0.551,
+          "cs.LG": 0.157,
+          "eess.IV": 0.069
+        },
+        "tail_share": 0.017
+      },
+      {
+        "cluster": 41,
+        "train_docs": 3717,
+        "fine_clusters": 6,
+        "top_terms": [
+          "quantum",
+          "classical",
+          "machine",
+          "learning",
+          "circuits",
+          "circuit",
+          "computing",
+          "variational"
+        ],
+        "top_categories": {
+          "quant-ph": 0.65,
+          "cs.LG": 0.138,
+          "cs.AI": 0.04
+        },
+        "tail_share": 0.087
+      },
+      {
+        "cluster": 4,
+        "train_docs": 3691,
+        "fine_clusters": 7,
+        "top_terms": [
+          "neural",
+          "network",
+          "classification",
+          "networks",
+          "image",
+          "deep",
+          "images",
+          "convolutional"
+        ],
+        "top_categories": {
+          "cs.CV": 0.44,
+          "cs.LG": 0.183,
+          "eess.IV": 0.144
+        },
+        "tail_share": 0.054
+      },
+      {
+        "cluster": 40,
+        "train_docs": 3676,
+        "fine_clusters": 10,
+        "top_terms": [
+          "quantization",
+          "compression",
+          "memory",
+          "low",
+          "accuracy",
+          "training",
+          "neural",
+          "model"
+        ],
+        "top_categories": {
+          "cs.LG": 0.588,
+          "cs.CL": 0.105,
+          "cs.CV": 0.103
+        },
+        "tail_share": 0.007
+      },
+      {
+        "cluster": 17,
+        "train_docs": 3663,
+        "fine_clusters": 9,
+        "top_terms": [
+          "data",
+          "real",
+          "world",
+          "learning",
+          "model",
+          "task",
+          "multi",
+          "prediction"
+        ],
+        "top_categories": {
+          "cs.LG": 0.461,
+          "cs.CV": 0.111,
+          "cs.CL": 0.101
+        },
+        "tail_share": 0.037
+      },
+      {
+        "cluster": 59,
+        "train_docs": 3640,
+        "fine_clusters": 8,
+        "top_terms": [
+          "problem",
+          "problems",
+          "optimization",
+          "solving",
+          "solution",
+          "optimal",
+          "search",
+          "approach"
+        ],
+        "top_categories": {
+          "cs.AI": 0.435,
+          "cs.LG": 0.189,
+          "math.OC": 0.074
+        },
+        "tail_share": 0.065
+      },
+      {
+        "cluster": 74,
+        "train_docs": 3609,
+        "fine_clusters": 8,
+        "top_terms": [
+          "shot",
+          "zero",
+          "learning",
+          "language",
+          "task",
+          "prompt",
+          "classification",
+          "tasks"
+        ],
+        "top_categories": {
+          "cs.CL": 0.401,
+          "cs.CV": 0.248,
+          "cs.LG": 0.214
+        },
+        "tail_share": 0.007
+      },
+      {
+        "cluster": 66,
+        "train_docs": 3606,
+        "fine_clusters": 9,
+        "top_terms": [
+          "distribution",
+          "data",
+          "distributions",
+          "training",
+          "model",
+          "samples",
+          "learning",
+          "test"
+        ],
+        "top_categories": {
+          "cs.LG": 0.47,
+          "stat.ML": 0.157,
+          "cs.CV": 0.082
+        },
+        "tail_share": 0.054
+      },
+      {
+        "cluster": 69,
+        "train_docs": 3591,
+        "fine_clusters": 9,
+        "top_terms": [
+          "reasoning",
+          "reinforcement",
+          "policy",
+          "rl",
+          "reward",
+          "training",
+          "learning",
+          "optimization"
+        ],
+        "top_categories": {
+          "cs.LG": 0.447,
+          "cs.CL": 0.249,
+          "cs.AI": 0.235
+        },
+        "tail_share": 0.003
+      },
+      {
+        "cluster": 81,
+        "train_docs": 3569,
+        "fine_clusters": 8,
+        "top_terms": [
+          "features",
+          "feature",
+          "selection",
+          "model",
+          "data",
+          "learning",
+          "prediction",
+          "using"
+        ],
+        "top_categories": {
+          "cs.LG": 0.492,
+          "cs.CL": 0.121,
+          "cs.CV": 0.079
+        },
+        "tail_share": 0.052
+      },
+      {
+        "cluster": 63,
+        "train_docs": 3547,
+        "fine_clusters": 9,
+        "top_terms": [
+          "data",
+          "method",
+          "regression",
+          "linear",
+          "model",
+          "sparse",
+          "proposed",
+          "algorithm"
+        ],
+        "top_categories": {
+          "cs.LG": 0.349,
+          "stat.ML": 0.264,
+          "stat.ME": 0.08
+        },
+        "tail_share": 0.069
+      },
+      {
+        "cluster": 96,
+        "train_docs": 3444,
+        "fine_clusters": 7,
+        "top_terms": [
+          "bounds",
+          "function",
+          "learning",
+          "bound",
+          "loss",
+          "functions",
+          "sample",
+          "error"
+        ],
+        "top_categories": {
+          "cs.LG": 0.49,
+          "stat.ML": 0.171,
+          "cs.DS": 0.055
+        },
+        "tail_share": 0.063
+      },
+      {
+        "cluster": 73,
+        "train_docs": 3346,
+        "fine_clusters": 8,
+        "top_terms": [
+          "prediction",
+          "structure",
+          "design",
+          "learning",
+          "molecular",
+          "models",
+          "discovery",
+          "protein"
+        ],
+        "top_categories": {
+          "cs.LG": 0.406,
+          "q-bio.BM": 0.132,
+          "q-bio.QM": 0.091
+        },
+        "tail_share": 0.393
+      },
+      {
+        "cluster": 53,
+        "train_docs": 3273,
+        "fine_clusters": 8,
+        "top_terms": [
+          "classification",
+          "class",
+          "data",
+          "label",
+          "learning",
+          "training",
+          "multi",
+          "labels"
+        ],
+        "top_categories": {
+          "cs.LG": 0.522,
+          "cs.CV": 0.141,
+          "cs.CL": 0.115
+        },
+        "tail_share": 0.024
+      },
+      {
+        "cluster": 78,
+        "train_docs": 3254,
+        "fine_clusters": 7,
+        "top_terms": [
+          "latent",
+          "space",
+          "representations",
+          "representation",
+          "variational",
+          "generative",
+          "model",
+          "learning"
+        ],
+        "top_categories": {
+          "cs.LG": 0.526,
+          "stat.ML": 0.107,
+          "cs.CV": 0.088
+        },
+        "tail_share": 0.056
+      },
+      {
+        "cluster": 92,
+        "train_docs": 3215,
+        "fine_clusters": 8,
+        "top_terms": [
+          "embeddings",
+          "word",
+          "embedding",
+          "semantic",
+          "representations",
+          "words",
+          "language",
+          "representation"
+        ],
+        "top_categories": {
+          "cs.CL": 0.707,
+          "cs.LG": 0.128,
+          "cs.CV": 0.029
+        },
+        "tail_share": 0.017
+      },
+      {
+        "cluster": 67,
+        "train_docs": 3174,
+        "fine_clusters": 8,
+        "top_terms": [
+          "graph",
+          "knowledge",
+          "graphs",
+          "entity",
+          "based",
+          "entities",
+          "text",
+          "reasoning"
+        ],
+        "top_categories": {
+          "cs.CL": 0.427,
+          "cs.AI": 0.274,
+          "cs.LG": 0.175
+        },
+        "tail_share": 0.014
+      },
+      {
+        "cluster": 49,
+        "train_docs": 3065,
+        "fine_clusters": 8,
+        "top_terms": [
+          "distillation",
+          "knowledge",
+          "student",
+          "teacher",
+          "model",
+          "transfer",
+          "models",
+          "learning"
+        ],
+        "top_categories": {
+          "cs.LG": 0.358,
+          "cs.CL": 0.228,
+          "cs.CV": 0.158
+        },
+        "tail_share": 0.011
+      },
+      {
+        "cluster": 79,
+        "train_docs": 3029,
+        "fine_clusters": 8,
+        "top_terms": [
+          "memory",
+          "long",
+          "context",
+          "attention",
+          "llms",
+          "term",
+          "token",
+          "tokens"
+        ],
+        "top_categories": {
+          "cs.CL": 0.464,
+          "cs.LG": 0.287,
+          "cs.AI": 0.15
+        },
+        "tail_share": 0.01
+      },
+      {
+        "cluster": 50,
+        "train_docs": 2953,
+        "fine_clusters": 6,
+        "top_terms": [
+          "classification",
+          "features",
+          "learning",
+          "based",
+          "using",
+          "data",
+          "accuracy",
+          "feature"
+        ],
+        "top_categories": {
+          "cs.LG": 0.317,
+          "eess.SP": 0.171,
+          "cs.CV": 0.112
+        },
+        "tail_share": 0.051
+      },
+      {
+        "cluster": 84,
+        "train_docs": 2916,
+        "fine_clusters": 7,
+        "top_terms": [
+          "systems",
+          "dynamics",
+          "model",
+          "time",
+          "data",
+          "learning",
+          "control",
+          "dimensional"
+        ],
+        "top_categories": {
+          "cs.LG": 0.398,
+          "eess.SY": 0.094,
+          "stat.ML": 0.086
+        },
+        "tail_share": 0.242
+      },
+      {
+        "cluster": 77,
+        "train_docs": 2902,
+        "fine_clusters": 9,
+        "top_terms": [
+          "dialogue",
+          "context",
+          "human",
+          "task",
+          "generation",
+          "user",
+          "model",
+          "multi"
+        ],
+        "top_categories": {
+          "cs.CL": 0.832,
+          "cs.AI": 0.068,
+          "cs.HC": 0.044
+        },
+        "tail_share": 0.007
+      },
+      {
+        "cluster": 32,
+        "train_docs": 2827,
+        "fine_clusters": 7,
+        "top_terms": [
+          "knowledge",
+          "language",
+          "models",
+          "domain",
+          "model",
+          "llms",
+          "pre",
+          "large"
+        ],
+        "top_categories": {
+          "cs.CL": 0.599,
+          "cs.AI": 0.203,
+          "cs.LG": 0.074
+        },
+        "tail_share": 0.02
+      },
+      {
+        "cluster": 16,
+        "train_docs": 2770,
+        "fine_clusters": 7,
+        "top_terms": [
+          "space",
+          "dimensional",
+          "data",
+          "low",
+          "learning",
+          "structure",
+          "matrix",
+          "rank"
+        ],
+        "top_categories": {
+          "cs.LG": 0.483,
+          "stat.ML": 0.135,
+          "cs.AI": 0.054
+        },
+        "tail_share": 0.123
+      },
+      {
+        "cluster": 11,
+        "train_docs": 2751,
+        "fine_clusters": 6,
+        "top_terms": [
+          "text",
+          "generation",
+          "language",
+          "generated",
+          "human",
+          "models",
+          "natural",
+          "model"
+        ],
+        "top_categories": {
+          "cs.CL": 0.646,
+          "cs.SE": 0.071,
+          "cs.LG": 0.064
+        },
+        "tail_share": 0.028
+      },
+      {
+        "cluster": 83,
+        "train_docs": 2687,
+        "fine_clusters": 7,
+        "top_terms": [
+          "human",
+          "language",
+          "natural",
+          "models",
+          "learning",
+          "processing",
+          "data",
+          "model"
+        ],
+        "top_categories": {
+          "cs.CL": 0.438,
+          "cs.AI": 0.176,
+          "cs.CV": 0.09
+        },
+        "tail_share": 0.044
+      },
+      {
+        "cluster": 82,
+        "train_docs": 2685,
+        "fine_clusters": 7,
+        "top_terms": [
+          "clinical",
+          "medical",
+          "language",
+          "patient",
+          "models",
+          "llms",
+          "health",
+          "large"
+        ],
+        "top_categories": {
+          "cs.CL": 0.521,
+          "cs.AI": 0.201,
+          "cs.CV": 0.139
+        },
+        "tail_share": 0.007
+      },
+      {
+        "cluster": 71,
+        "train_docs": 2647,
+        "fine_clusters": 6,
+        "top_terms": [
+          "decision",
+          "making",
+          "optimal",
+          "problem",
+          "policy",
+          "process",
+          "approach",
+          "problems"
+        ],
+        "top_categories": {
+          "cs.AI": 0.377,
+          "cs.LG": 0.316,
+          "stat.ML": 0.063
+        },
+        "tail_share": 0.033
+      },
+      {
+        "cluster": 86,
+        "train_docs": 2516,
+        "fine_clusters": 5,
+        "top_terms": [
+          "matrix",
+          "rank",
+          "low",
+          "algorithm",
+          "sparse",
+          "problem",
+          "algorithms",
+          "analysis"
+        ],
+        "top_categories": {
+          "cs.LG": 0.347,
+          "stat.ML": 0.241,
+          "math.OC": 0.07
+        },
+        "tail_share": 0.046
+      },
+      {
+        "cluster": 76,
+        "train_docs": 2416,
+        "fine_clusters": 6,
+        "top_terms": [
+          "multimodal",
+          "modal",
+          "cross",
+          "visual",
+          "modality",
+          "modalities",
+          "multi",
+          "text"
+        ],
+        "top_categories": {
+          "cs.CV": 0.294,
+          "cs.LG": 0.263,
+          "cs.CL": 0.173
+        },
+        "tail_share": 0.045
+      },
+      {
+        "cluster": 85,
+        "train_docs": 2213,
+        "fine_clusters": 5,
+        "top_terms": [
+          "learning",
+          "new",
+          "task",
+          "continual",
+          "knowledge",
+          "forgetting",
+          "class",
+          "memory"
+        ],
+        "top_categories": {
+          "cs.LG": 0.641,
+          "cs.CV": 0.153,
+          "cs.CL": 0.083
+        },
+        "tail_share": 0.003
+      },
+      {
+        "cluster": 72,
+        "train_docs": 2078,
+        "fine_clusters": 5,
+        "top_terms": [
+          "detection",
+          "object",
+          "image",
+          "anomaly",
+          "images",
+          "objects",
+          "dataset",
+          "segmentation"
+        ],
+        "top_categories": {
+          "cs.CV": 0.784,
+          "cs.LG": 0.057,
+          "eess.IV": 0.038
+        },
+        "tail_share": 0.018
+      },
+      {
+        "cluster": 45,
+        "train_docs": 2027,
+        "fine_clusters": 5,
+        "top_terms": [
+          "algorithm",
+          "algorithms",
+          "data",
+          "new",
+          "based",
+          "time",
+          "learning",
+          "efficient"
+        ],
+        "top_categories": {
+          "cs.LG": 0.339,
+          "cs.AI": 0.12,
+          "stat.ML": 0.087
+        },
+        "tail_share": 0.105
+      },
+      {
+        "cluster": 30,
+        "train_docs": 1820,
+        "fine_clusters": 4,
+        "top_terms": [
+          "video",
+          "generation",
+          "diffusion",
+          "quality",
+          "text",
+          "temporal",
+          "videos",
+          "models"
+        ],
+        "top_categories": {
+          "cs.CV": 0.668,
+          "cs.SD": 0.114,
+          "cs.RO": 0.053
+        },
+        "tail_share": 0.048
+      },
+      {
+        "cluster": 6,
+        "train_docs": 1809,
+        "fine_clusters": 5,
+        "top_terms": [
+          "diffusion",
+          "distribution",
+          "generative",
+          "sampling",
+          "models",
+          "distributions",
+          "based",
+          "flow"
+        ],
+        "top_categories": {
+          "cs.LG": 0.538,
+          "stat.ML": 0.207,
+          "cs.CV": 0.045
+        },
+        "tail_share": 0.11
+      },
+      {
+        "cluster": 99,
+        "train_docs": 1771,
+        "fine_clusters": 4,
+        "top_terms": [
+          "human",
+          "reward",
+          "alignment",
+          "preference",
+          "optimization",
+          "model",
+          "models",
+          "reinforcement"
+        ],
+        "top_categories": {
+          "cs.LG": 0.393,
+          "cs.CL": 0.369,
+          "cs.AI": 0.15
+        },
+        "tail_share": 0.006
+      },
+      {
+        "cluster": 95,
+        "train_docs": 1685,
+        "fine_clusters": 4,
+        "top_terms": [
+          "long",
+          "memory",
+          "neural",
+          "networks",
+          "network",
+          "term",
+          "short",
+          "model"
+        ],
+        "top_categories": {
+          "cs.CL": 0.308,
+          "cs.LG": 0.302,
+          "cs.NE": 0.061
+        },
+        "tail_share": 0.04
+      },
+      {
+        "cluster": 26,
+        "train_docs": 564,
+        "fine_clusters": 1,
+        "top_terms": [
+          "federated",
+          "attacks",
+          "fl",
+          "attack",
+          "clients",
+          "privacy",
+          "adversarial",
+          "learning"
+        ],
+        "top_categories": {
+          "cs.LG": 0.562,
+          "cs.CR": 0.394,
+          "cs.AI": 0.009
+        },
+        "tail_share": 0.0
+      },
+      {
+        "cluster": 18,
+        "train_docs": 506,
+        "fine_clusters": 1,
+        "top_terms": [
+          "regret",
+          "online",
+          "algorithm",
+          "optimization",
+          "algorithms",
+          "bound",
+          "convex",
+          "stochastic"
+        ],
+        "top_categories": {
+          "cs.LG": 0.729,
+          "math.OC": 0.123,
+          "stat.ML": 0.071
+        },
+        "tail_share": 0.004
+      },
+      {
+        "cluster": 13,
+        "train_docs": 478,
+        "fine_clusters": 1,
+        "top_terms": [
+          "speech",
+          "translation",
+          "machine",
+          "end",
+          "recognition",
+          "asr",
+          "text",
+          "english"
+        ],
+        "top_categories": {
+          "cs.CL": 0.881,
+          "eess.AS": 0.046,
+          "cs.SD": 0.029
+        },
+        "tail_share": 0.013
+      }
+    ],
+    "clusters_per_category_median": {
+      "head": 99.5,
+      "mid": 83.5,
+      "tail": 24.5
+    }
+  }
+}

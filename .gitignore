@@ -4,3 +4,6 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 uv.lock
+*.bin
+logs/
+data/subsets/
