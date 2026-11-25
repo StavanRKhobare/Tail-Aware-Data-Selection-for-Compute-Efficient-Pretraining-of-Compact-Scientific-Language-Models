@@ -1,26 +1,36 @@
 # Tail-Aware Data Selection for Compact Scientific LMs
 
-Part 1: corpus collection. Source: librarian-bots/arxiv-metadata-snapshot
-(pinned revision in data/raw/source_info.json). Details: DATASET.md.
+This project tests how the mix of scientific papers affects next-token prediction under a fixed training budget. It includes a compact Transformer trained from scratch, a SmolLM2 continued-pretraining comparison, and the local TailLab demo.
 
-Run order:
-  uv run python src/build_raw.py
-  uv run python src/inspect_corpus.py
-  uv run python src/clean_corpus.py
-  uv run python src/split_corpus.py
+## Results
 
-The Part 1 outputs (data/processed/*.parquet) are also on Kaggle:
-vroomvroom2006/processedryan. Download them into data/processed/ to skip Part 1.
+Across five seeds at approximately 60M tokens per run, tail-aware selection lowered the 17M model's mean rare-topic validation loss from 3.9477 to 3.8571. Its mean overall validation loss rose from 3.6514 to 3.6677. A seed-42 comparison with SmolLM2 showed the same direction. The [five-seed review](reports/five_seed_results_review.md) and [drafting guide](docs/phase1_drafting_application.md) document the results and their limits.
 
-Part 2: data selection and tokenization. Details: PART2.md.
+## Run TailLab
 
-Run order (about 20 min on 4 CPU cores, no GPU needed):
-  uv run python src/train_tokenizer.py   # BPE tokenizer + token counts
-  uv run python src/score_quality.py     # quality, near-duplicates, leakage
-  uv run python src/build_topics.py      # head / mid / tail + text clusters
-  uv run python src/select_subsets.py    # the 5 training subsets (30M tokens each)
-  uv run python src/export_tokens.py     # .bin token files for Part 3
-  uv run pytest                          # unit tests
+```bash
+uv run --group train --group transfer uvicorn demo.server:app --host 127.0.0.1 --port 8765
+```
 
-Committed Part 2 outputs: tokenizer/tokenizer.json, manifests/*.txt.gz
-(the document ids of every subset), reports/*.json, reports/figures/.
+Open <http://127.0.0.1:8765>. The app can format notes and display committed reports before you have model checkpoints. The [drafting guide](docs/phase1_drafting_application.md) lists the experimental engines and outlines how to reproduce the comparisons.
+
+## Reproduce the experiment
+
+The pinned arXiv corpus and preprocessing steps are described in [DATASET.md](DATASET.md). The processed Parquet files are also available as `vroomvroom2006/processedryan` on Kaggle.
+
+```bash
+uv run python build_corpus.py
+uv run python src/score_quality.py
+uv run python src/build_topics.py
+uv run python src/export_tokens.py
+```
+
+The fixed tokenizer and five subset manifests are already in the repository. See [PART2.md](PART2.md) to rebuild the tokenizer or manifests. See [PART3.md](PART3.md) for training, checkpoints, and interpretation, and [Transformer architecture](docs/transformer_architecture.md) for the 17M and 34M models trained from scratch.
+
+```bash
+uv run --group train python src/train_all.py --seeds 42 43 44 45 46 --max-tokens 60000000
+uv run --group train python audit_results.py --seeds 42 43 44 45 46 --tag 5seed
+uv run --group train pytest -q
+```
+
+Corpus exports, generated drafting datasets, and checkpoints are kept locally. The repository includes the tokenizer, subset manifests, authored evaluation cases, and reports. Tests that inspect local drafting data skip when those files are absent.

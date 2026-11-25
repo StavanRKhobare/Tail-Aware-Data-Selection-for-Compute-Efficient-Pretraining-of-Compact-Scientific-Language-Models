@@ -1,0 +1,445 @@
+{
+  "engines": {
+    "formatter": "Formatter",
+    "model": "17M Transformer (V3)",
+    "model_17m_rewrite": "17M Transformer (draft pilot)",
+    "model_34m": "34M Transformer (draft pilot)",
+    "smollm2_random": "SmolLM2 random (draft pilot)",
+    "smollm2_tail": "SmolLM2 tail-aware (draft pilot)"
+  },
+  "cases": [
+    {
+      "input": {
+        "id": "missing_results",
+        "problem": "Rare categories receive little training data.",
+        "method": "Compare random and tail-aware selection.",
+        "results": "",
+        "title": "",
+        "checks": [
+          "Must not announce an improvement or numerical result."
+        ]
+      },
+      "outputs": {
+        "formatter": {
+          "status": 200,
+          "title": "",
+          "abstract": "Rare categories receive little training data. Compare random and tail-aware selection.",
+          "raw_abstract": "Rare categories receive little training data. Compare random and tail-aware selection.",
+          "engine": "formatter",
+          "method": "formatter",
+          "notice": "Formatter selected.",
+          "warnings": [
+            "Results were not supplied. Check that the draft claims no findings."
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 11,
+          "stop_reason": null
+        },
+        "model": {
+          "status": 200,
+          "title": "Rare categories receive little training data",
+          "abstract": "Rare categories receive little training data. Compare random and tail-aware selection.",
+          "raw_abstract": "Rare categories receive little training data. Compare random and tail-aware selection. Compare random and tail-aware selection.",
+          "engine": "model",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 17M Transformer (V3). Review every scientific claim.",
+          "warnings": [
+            "Results were not supplied. Check that the draft claims no findings."
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 11,
+          "stop_reason": "eos"
+        },
+        "model_17m_rewrite": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " Rare categories receive little training data. We present a novel approach for the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the problem of the the problem of the problem of the the problem of the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem of the the problem",
+          "stop_reason": "max_new_tokens"
+        },
+        "model_34m": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title.",
+          "stop_reason": "eos"
+        },
+        "smollm2_random": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " \nAbstract: Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data",
+          "stop_reason": "max_new_tokens"
+        },
+        "smollm2_tail": {
+          "status": 200,
+          "title": "Rare categories receive little training data.",
+          "abstract": "Rare categories receive little training data.",
+          "raw_abstract": "Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data. Rare categories receive little training data.",
+          "engine": "smollm2_tail",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 tail-aware (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Results were not supplied. Check that the draft claims no findings.",
+            "Model output contains repetition. Inspect the original output or use source wording.",
+            "Output reached the token limit and may be incomplete."
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 6,
+          "stop_reason": "max_new_tokens"
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "negative_result",
+        "problem": "Rare categories receive little training data.",
+        "method": "Train a 17.1M parameter model for 60M tokens.",
+        "results": "Tail-aware selection did not improve rare-topic loss.",
+        "title": "",
+        "checks": [
+          "Preserve the negative finding and both quantities."
+        ]
+      },
+      "outputs": {
+        "formatter": {
+          "status": 200,
+          "title": "",
+          "abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection did not improve rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection did not improve rare-topic loss.",
+          "engine": "formatter",
+          "method": "formatter",
+          "notice": "Formatter selected.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 21,
+          "stop_reason": null
+        },
+        "model": {
+          "status": 200,
+          "title": "Rare categories receive little training data",
+          "abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection did not improve rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection did not improve rare-topic loss.",
+          "engine": "model",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 17M Transformer (V3). Review every scientific claim.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 21,
+          "stop_reason": "eos"
+        },
+        "model_17m_rewrite": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " Rare categories receive little training data. We propose a four----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------",
+          "stop_reason": "max_new_tokens"
+        },
+        "model_34m": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title. The sample model for 100M tokens.\nResults: the family receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title: Rare categories receive a lot of the title. The sample model for 100M tokens.\nResults: the family receive a lot of the title: Rare categories receive a lot of the title. The sample model for 100M tokens.\nResults: the family receive a lot of the title: Rare categories receive a lot of the title. The sample model for 100M tokens. The sample model for 100M tokens. The sample model for 100M tokens. The sample model for 100M tokens. The sample model for 100M tokens. the training the model for 100M tokens. The model for 100M tokens. the model for 100M tokens. The sample model for",
+          "stop_reason": "max_new_tokens"
+        },
+        "smollm2_random": {
+          "status": 200,
+          "title": "Rare categories receive little training data.",
+          "abstract": "Rare categories receive little training data. Tail-aware selection did not improve rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Tail-aware selection did not improve rare-topic loss.",
+          "engine": "smollm2_random",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 random (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 17.1, 60"
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 13,
+          "stop_reason": "eos"
+        },
+        "smollm2_tail": {
+          "status": 200,
+          "title": "Rare categories receive little training data.",
+          "abstract": "Rare categories receive little training data. Tail-aware selection did not improve rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Tail-aware selection did not improve rare-topic loss.",
+          "engine": "smollm2_tail",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 tail-aware (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 17.1, 60"
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 13,
+          "stop_reason": "eos"
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "positive_result",
+        "problem": "Rare categories receive little training data.",
+        "method": "Train a 17.1M parameter model for 60M tokens.",
+        "results": "Tail-aware selection improved rare-topic loss.",
+        "title": "",
+        "checks": [
+          "Preserve the positive finding. Compare against negative_result."
+        ]
+      },
+      "outputs": {
+        "formatter": {
+          "status": 200,
+          "title": "",
+          "abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection improved rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection improved rare-topic loss.",
+          "engine": "formatter",
+          "method": "formatter",
+          "notice": "Formatter selected.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 19,
+          "stop_reason": null
+        },
+        "model": {
+          "status": 200,
+          "title": "Rare categories receive little training data",
+          "abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection improved rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection improved rare-topic loss.",
+          "engine": "model",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 17M Transformer (V3). Review every scientific claim.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 19,
+          "stop_reason": "eos"
+        },
+        "model_17m_rewrite": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " Rare categories receive little training data. Weaker: Rare categories receive little training data. Weaker: Rare categories receive little training data. Rare categories receive little training data, which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which which",
+          "stop_reason": "max_new_tokens"
+        },
+        "model_34m": {
+          "status": 200,
+          "title": "Rare categories receive much training data.",
+          "abstract": "Training a 7.1M parameter model for 100M tokens. Abstract: Training a 7.1M parameter model for 100M tokens. The 7.1M parameter model for 100M tokens. the 3.2M parameter model for 100M tokens. the 3",
+          "raw_abstract": "Training a 7.1M parameter model for 100M tokens.\nAbstract: Training a 7.1M parameter model for 100M tokens.\nAbstract: Training a 7.1M parameter model for 100M tokens.\nAbstract: Training a 7.1M parameter model for 100M tokens.\nAbstract: Training a 7.1M parameter model for 100M tokens.\nAbstract: Training a 7.1M parameter model for 100M tokens.\nAbstract: Training a 7.1M parameter model for 100M tokens. The 7.1M parameter model for 100M tokens. The 7.1M parameter model for 100M tokens. The 7.1M parameter model for 100M tokens. The 7.1M parameter model for 100M tokens. the 7.1M parameter model for 100M tokens. The 7.1M parameter model for 100M tokens. the 3.2M parameter model for 100M tokens. the 3",
+          "engine": "model_34m",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 34M Transformer (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Output contains numerical values absent from the notes: 100, 3, 3.2, 7.1",
+            "Check omitted numerical values: 17.1, 60",
+            "Model output contains repetition. Inspect the original output or use source wording.",
+            "Output reached the token limit and may be incomplete."
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 33,
+          "stop_reason": "max_new_tokens"
+        },
+        "smollm2_random": {
+          "status": 200,
+          "title": "Rare categories receive little training data.",
+          "abstract": "Rare categories receive little training data. Tail-aware selection improved rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Tail-aware selection improved rare-topic loss.",
+          "engine": "smollm2_random",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 random (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 17.1, 60"
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 11,
+          "stop_reason": "eos"
+        },
+        "smollm2_tail": {
+          "status": 200,
+          "title": "Rare categories receive little training data.",
+          "abstract": "Rare categories receive little training data. Tail-aware selection improved rare-topic loss.",
+          "raw_abstract": "Rare categories receive little training data. Tail-aware selection improved rare-topic loss.",
+          "engine": "smollm2_tail",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 tail-aware (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 17.1, 60"
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 11,
+          "stop_reason": "eos"
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "numbers",
+        "problem": "Evaluate a classifier.",
+        "method": "Use 800 training and 200 validation examples.",
+        "results": "Validation accuracy was 81.2%.",
+        "title": "Classifier Evaluation",
+        "checks": [
+          "Preserve 800, 200, and 81.2%. Do not introduce test accuracy."
+        ]
+      },
+      "outputs": {
+        "formatter": {
+          "status": 200,
+          "title": "Classifier Evaluation",
+          "abstract": "Evaluate a classifier. Use 800 training and 200 validation examples. Validation accuracy was 81.2%.",
+          "raw_abstract": "Evaluate a classifier. Use 800 training and 200 validation examples. Validation accuracy was 81.2%.",
+          "engine": "formatter",
+          "method": "formatter",
+          "notice": "Formatter selected.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 14,
+          "stop_reason": null
+        },
+        "model": {
+          "status": 200,
+          "title": "Classifier Evaluation",
+          "abstract": "Evaluate a classifier. Use 800 training and 200 validation examples. Validation accuracy was 81.2%.",
+          "raw_abstract": "Evaluate a classifier. Use 800 training and 200 validation examples. Validation accuracy was 81.2%.",
+          "engine": "model",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 17M Transformer (V3). Review every scientific claim.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 14,
+          "stop_reason": "eos"
+        },
+        "model_17m_rewrite": {
+          "status": 200,
+          "title": "Classifier Evaluation",
+          "abstract": "A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier",
+          "raw_abstract": "A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier Evaluation: A classifier",
+          "engine": "model_17m_rewrite",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 17M Transformer (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 200, 800, 81.2%",
+            "Model output contains repetition. Inspect the original output or use source wording.",
+            "Output reached the token limit and may be incomplete."
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 158,
+          "stop_reason": "max_new_tokens"
+        },
+        "model_34m": {
+          "status": 200,
+          "title": "Classifier Evaluation",
+          "abstract": "Classifier Evaluation\nAbstract: Classifier Evaluation\nAbstract: Classifier Evaluation\nAbstract: Classifier Evaluation\nAbstract: Classifier Evaluation. The Classifier Evaluation\nAbstract: Classifier Evaluation. The Classifier Evaluation. the",
+          "raw_abstract": "Classifier Evaluation\nAbstract: Classifier Evaluation\nAbstract: Classifier Evaluation\nAbstract: Classifier Evaluation\nAbstract: Classifier Evaluation. The Classifier Evaluation\nAbstract: Classifier Evaluation. The Classifier Evaluation\nAbstract: Classifier Evaluation. The Classifier Evaluation\nAbstract: Classifier Evaluation. The Classifier Evaluation. The Classifier Evaluation. The Classifier Evaluation. The Classifier Evaluation. The Classifier Evaluation. The Classifier Evaluation. The Classifier Evaluation. the Classifier Evaluation. The Classifier Evaluation. the Classifier Evaluation. The Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. The Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. The Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the Classifier Evaluation. the",
+          "engine": "model_34m",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 34M Transformer (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 200, 800, 81.2%",
+            "Model output contains repetition. Inspect the original output or use source wording.",
+            "Output reached the token limit and may be incomplete."
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 24,
+          "stop_reason": "max_new_tokens"
+        },
+        "smollm2_random": {
+          "status": 200,
+          "title": "Classifier Evaluation",
+          "abstract": "Evaluate a classifier.",
+          "raw_abstract": "Evaluate a classifier.",
+          "engine": "smollm2_random",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 random (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 200, 800, 81.2%"
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 3,
+          "stop_reason": "eos"
+        },
+        "smollm2_tail": {
+          "status": 200,
+          "title": "Classifier Evaluation",
+          "abstract": "Evaluate a classifier.",
+          "raw_abstract": "Evaluate a classifier.",
+          "engine": "smollm2_tail",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 tail-aware (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 200, 800, 81.2%"
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 3,
+          "stop_reason": "eos"
+        }
+      }
+    },
+    {
+      "input": {
+        "id": "research_notes",
+        "problem": "Compact scientific language models perform poorly on underrepresented topics.",
+        "method": "Compare random and tail-aware data selection. Train a 17.1-million-parameter Transformer on 60 million tokens from scientific paper titles and abstracts across five seeds.",
+        "results": "Tail-aware selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss.",
+        "limitations": "One corpus, one model size, one training budget.",
+        "checks": [
+          "Preserve the opposing results, training quantities, and scope limitation."
+        ]
+      },
+      "outputs": {
+        "formatter": {
+          "status": 200,
+          "title": "",
+          "abstract": "Compact scientific language models perform poorly on underrepresented topics. Compare random and tail-aware data selection. Train a 17.1-million-parameter Transformer on 60 million tokens from scientific paper titles and abstracts across five seeds. Tail-aware selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss. One corpus, one model size, one training budget.",
+          "raw_abstract": "Compact scientific language models perform poorly on underrepresented topics. Compare random and tail-aware data selection. Train a 17.1-million-parameter Transformer on 60 million tokens from scientific paper titles and abstracts across five seeds. Tail-aware selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss. One corpus, one model size, one training budget.",
+          "engine": "formatter",
+          "method": "formatter",
+          "notice": "Formatter selected.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 57,
+          "stop_reason": null
+        },
+        "model": {
+          "status": 200,
+          "title": "Compact scientific language models perform poorly on underrepresented topics",
+          "abstract": "Compact scientific language models perform poorly on underrepresented topics. Compare random and tail-aware data selection. Train a 17.1-million-parameter Transformer on 60 million tokens from scientific paper title datasets. Random selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss.",
+          "raw_abstract": "Compact scientific language models perform poorly on underrepresented topics. Compare random and tail-aware data selection. Train a 17.1-million-parameter Transformer on 60 million tokens from scientific paper title datasets. Random selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss.",
+          "engine": "model",
+          "method": "adapted checkpoint",
+          "notice": "Generated with 17M Transformer (V3). Review every scientific claim.",
+          "warnings": [],
+          "editing": "Sentence deduplication",
+          "word_count": 45,
+          "stop_reason": "eos"
+        },
+        "model_17m_rewrite": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " Asian scientific language models perform poorly on underrepresented topics and abstracts across four seeds. Weaker: Asian scientific language models perform poorly on underrepresented topics and abstracts across four seeds. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts across four seeds. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts across four seeds. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts. Training a 12.1-million-parameter Transformer on 8000 tokens from scientific article titles and abstracts. Training a",
+          "stop_reason": "max_new_tokens"
+        },
+        "model_34m": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " Compact scientific language models perform poorly on underrepresented topics. We present a novel synthetic corpus, the first-million-parameter Transformer on 100 million tokens from scientific paper titles and abstracts across five seeds. Using this synthetic corpus, the second-million-parameter Transformer on 100 million tokens from scientific paper titles and abstracts across five seeds. We present a novel synthetic corpus, the first-million-parameter Transformer on 100 million tokens from scientific paper titles and abstracts across five seeds. We present a novel synthetic corpus, the first-million-parameter Transformer on 100 million tokens from scientific paper titles and abstracts across five seeds. We present a novel synthetic corpus, the first-million-parameter Transformer on 100 million tokens from scientific paper titles and abstracts across five seeds. We present a novel synthetic corpus, the first-million-parameter Transformer on 100 million tokens from scientific paper titles and abstracts across five seeds. We present a novel synthetic corpus, the first-million-parameter Transformer on 100 million tokens from scientific paper titles and abstracts across five seeds from the scientific paper titles and abstracts. We present",
+          "stop_reason": "max_new_tokens"
+        },
+        "smollm2_random": {
+          "status": 502,
+          "detail": "Model produced an incomplete draft. Select source wording or formatter mode.",
+          "raw_output": " \nAbstract: Compact scientific language models perform poorly on underrepresented topics. Tail-aware selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss.",
+          "stop_reason": "eos"
+        },
+        "smollm2_tail": {
+          "status": 200,
+          "title": "Compact scientific language models perform poorly on underrepresented topics.",
+          "abstract": "Compact scientific language models perform poorly on underrepresented topics. Tail-aware selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss.",
+          "raw_abstract": "Compact scientific language models perform poorly on underrepresented topics. Tail-aware selection improved rare-topic validation loss across all five seeds. Random selection achieved lower overall validation loss.",
+          "engine": "smollm2_tail",
+          "method": "adapted checkpoint",
+          "notice": "Generated with SmolLM2 tail-aware (draft pilot). Review every scientific claim.",
+          "warnings": [
+            "Check omitted numerical values: 17.1, 60"
+          ],
+          "editing": "Sentence deduplication",
+          "word_count": 26,
+          "stop_reason": "eos"
+        }
+      }
+    }
+  ],
+  "review": "SmolLM2 tail-aware returned all five drafts, but repeated the opening when results were absent and omitted all three quantities in the classifier case. On the longer research notes, it correctly attributed both findings while omitting the method and limitation. The 17M V3 draft attributed both findings to random selection, and the 34M pilot introduced unsupported quantities in the positive-result case. Preserve supplied sentences when fidelity is essential."
+}

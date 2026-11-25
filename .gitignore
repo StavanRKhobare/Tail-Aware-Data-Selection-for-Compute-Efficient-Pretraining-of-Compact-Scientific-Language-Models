@@ -3,7 +3,34 @@ __pycache__/
 *.parquet
 .ipynb_checkpoints/
 .env
+.env.*
+!.env.example
 uv.lock
 *.bin
 logs/
 data/subsets/
+runs/
+runs_*/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+unsloth_compiled_cache/
+.pytest_cache/
+*.log
+*.tmp
+
+# Local tooling state and regenerated SmolLM2 token exports
+/config/
+/.superpowers/
+/data/subsets_smollm2/
+
+# Generated drafting datasets and local source-derived annotations
+/data/draft_*/train.jsonl
+/data/draft_*/val.jsonl
+/data/draft_*/report.json
+/data/draft_curated_v1/annotations.json
+/data/draft_curated_v1/prepared/
+/data/title_sft_v1/train.jsonl
+/data/title_sft_v1/val.jsonl
+/data/title_sft_v1/report.json

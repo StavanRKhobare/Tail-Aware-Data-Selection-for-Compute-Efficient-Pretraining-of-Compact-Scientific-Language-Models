@@ -1,0 +1,7 @@
+strategy,token_len_mean,token_len_std,token_len_min,token_len_p10,token_len_p25,token_len_median,token_len_p75,token_len_p90,token_len_p99,token_len_max
+full_train,246.36,70.3,28,159,198,243,292,340,420,1271
+random,246.37,70.27,30,159,198,243,292,340,420,1271
+quality,246.94,68.55,73,161,199,243,292,339,418,718
+diversity,244.84,68.56,73,158,197,241,289,337,417,718
+tail_aware,249.15,71.45,74,159,198,244,296,345,427,718
+tail_only,248.22,73.48,28,156,197,244,296,346,429,1271

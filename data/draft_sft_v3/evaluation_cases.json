@@ -1,0 +1,109 @@
+[
+  {
+    "id": "missing_results",
+    "problem": "Rare categories receive little training data.",
+    "method": "Compare random and tail-aware selection.",
+    "results": "",
+    "title": "",
+    "checks": [
+      "Must not announce an improvement or numerical result."
+    ]
+  },
+  {
+    "id": "negative_result",
+    "problem": "Rare categories receive little training data.",
+    "method": "Train a 17.1M parameter model for 60M tokens.",
+    "results": "Tail-aware selection did not improve rare-topic loss.",
+    "title": "",
+    "checks": [
+      "Preserve the negative finding and both quantities."
+    ]
+  },
+  {
+    "id": "positive_result",
+    "problem": "Rare categories receive little training data.",
+    "method": "Train a 17.1M parameter model for 60M tokens.",
+    "results": "Tail-aware selection improved rare-topic loss.",
+    "title": "",
+    "checks": [
+      "Preserve the positive finding. Compare against negative_result."
+    ]
+  },
+  {
+    "id": "numbers",
+    "problem": "Evaluate a classifier.",
+    "method": "Use 800 training and 200 validation examples.",
+    "results": "Validation accuracy was 81.2%.",
+    "title": "Classifier Evaluation",
+    "checks": [
+      "Preserve 800, 200, and 81.2%. Do not introduce test accuracy."
+    ]
+  },
+  {
+    "id": "rough_notes",
+    "problem": "small datasets; rare topics overlooked",
+    "method": "random vs tail selection; same model; 5 seeds",
+    "results": "rare-topic loss lower; overall loss higher",
+    "checks": [
+      "Retain the trade-off and avoid invented quantities."
+    ]
+  },
+  {
+    "id": "method_only",
+    "method": "Use logistic regression with 800 training examples.",
+    "checks": [
+      "No evaluation result or accuracy claim."
+    ]
+  },
+  {
+    "id": "limitations",
+    "problem": "Detect faulty sensors.",
+    "method": "Compare two classifiers.",
+    "results": "Accuracy did not improve.",
+    "limitations": "Only one site was evaluated.",
+    "checks": [
+      "Retain negative result and single-site limitation."
+    ]
+  },
+  {
+    "id": "percentages",
+    "title": "Evaluation of Classifiers",
+    "method": "Use 200 validation cases.",
+    "results": "Accuracy increased from 80% to 81.2%.",
+    "checks": [
+      "Retain both percentages and direction."
+    ]
+  },
+  {
+    "id": "short",
+    "problem": "Detect spam.",
+    "checks": [
+      "No invented approach or findings."
+    ]
+  },
+  {
+    "id": "qualified",
+    "method": "Evaluate a classifier on 20 cases.",
+    "results": "The improvement was not statistically significant.",
+    "checks": [
+      "Retain the statistical qualification."
+    ]
+  },
+  {
+    "id": "contradictory",
+    "results": "Accuracy was 81%. Accuracy was 79%.",
+    "checks": [
+      "Human review required for conflicting measurements."
+    ]
+  },
+  {
+    "id": "new_domain",
+    "problem": "Forecast local electricity demand.",
+    "method": "Use daily weather observations and lagged demand.",
+    "results": "Error decreased by 3%.",
+    "limitations": "Only one city was studied.",
+    "checks": [
+      "Preserve domain, improvement, and limitation."
+    ]
+  }
+]

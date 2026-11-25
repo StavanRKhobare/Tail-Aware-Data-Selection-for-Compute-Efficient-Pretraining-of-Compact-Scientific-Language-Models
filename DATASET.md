@@ -34,7 +34,9 @@ The snapshot we use is derived from the Cornell University arXiv metadata dump (
 
 ## 3. Collection procedure
 
-Script: `src/build_raw.py`
+Run `uv run python build_corpus.py` from the repository root to collect,
+inspect, clean, and split the corpus. To run collection by itself, use
+`uv run python src/build_raw.py`.
 
 1. Resolve and **pin** the dataset revision (written to `data/raw/source_info.json`; later runs reuse it).
 2. Stream the snapshot (no full download) and keep any record whose `categories` string contains at least one of: `cs.CL`, `cs.LG`, `cs.AI`, `stat.ML`.

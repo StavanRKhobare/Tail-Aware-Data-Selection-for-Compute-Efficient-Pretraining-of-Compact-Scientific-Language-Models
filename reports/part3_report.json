@@ -1,0 +1,72 @@
+{
+  "random": {
+    "runs": 2,
+    "seeds": [
+      42,
+      43
+    ],
+    "mean_tokens_seen": 59998208.0,
+    "mean_final_val_loss": 3.658406,
+    "std_final_val_loss": 0.001958,
+    "mean_final_val_ppl": 38.799488,
+    "mean_tokens_per_s": 83378.100017,
+    "mean_wall_time_s": 719.591999,
+    "mean_peak_mem_mb": 4703.026367
+  },
+  "quality": {
+    "runs": 2,
+    "seeds": [
+      42,
+      43
+    ],
+    "mean_tokens_seen": 59998208.0,
+    "mean_final_val_loss": 3.646548,
+    "std_final_val_loss": 0.000196,
+    "mean_final_val_ppl": 38.342089,
+    "mean_tokens_per_s": 83337.570701,
+    "mean_wall_time_s": 719.941888,
+    "mean_peak_mem_mb": 4703.026367
+  },
+  "diversity": {
+    "runs": 2,
+    "seeds": [
+      42,
+      43
+    ],
+    "mean_tokens_seen": 59998208.0,
+    "mean_final_val_loss": 3.663418,
+    "std_final_val_loss": 0.004759,
+    "mean_final_val_ppl": 38.994619,
+    "mean_tokens_per_s": 83382.010031,
+    "mean_wall_time_s": 719.558188,
+    "mean_peak_mem_mb": 4703.026367
+  },
+  "tail_aware": {
+    "runs": 2,
+    "seeds": [
+      42,
+      43
+    ],
+    "mean_tokens_seen": 59998208.0,
+    "mean_final_val_loss": 3.662234,
+    "std_final_val_loss": 0.002822,
+    "mean_final_val_ppl": 38.948317,
+    "mean_tokens_per_s": 83364.837516,
+    "mean_wall_time_s": 719.706426,
+    "mean_peak_mem_mb": 4703.026367
+  },
+  "tail_only": {
+    "runs": 2,
+    "seeds": [
+      42,
+      43
+    ],
+    "mean_tokens_seen": 59998208.0,
+    "mean_final_val_loss": 3.671519,
+    "std_final_val_loss": 0.011988,
+    "mean_final_val_ppl": 39.312977,
+    "mean_tokens_per_s": 83367.140936,
+    "mean_wall_time_s": 719.686526,
+    "mean_peak_mem_mb": 4703.026367
+  }
+}

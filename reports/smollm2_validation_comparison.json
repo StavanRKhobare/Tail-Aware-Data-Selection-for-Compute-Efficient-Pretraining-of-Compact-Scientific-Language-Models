@@ -1,0 +1,57 @@
+{
+  "split": "val",
+  "model": {
+    "backend": "smollm2",
+    "tokenizer_sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+    "weights_sha256": "80521b40281d6ce74e35c9282c22539e75aa0ac8578892b2a59955ef78d55da1",
+    "config_sha256": "1d556eab73b69c7f11f64c557a2f9c6f440bd4c6b89bb2584a6b498c92603843",
+    "block_size": 512
+  },
+  "runs": {
+    "base": {
+      "overall": 3.342244920525138,
+      "loss_by_group": {
+        "head": 3.355913403960931,
+        "mid": 3.2967244981069306,
+        "tail": 3.311010570411787
+      },
+      "tokens_by_group": {
+        "head": 4636879,
+        "mid": 1210736,
+        "tail": 264641
+      }
+    },
+    "random": {
+      "overall": 2.8568461110689234,
+      "loss_by_group": {
+        "head": 2.8383018396197524,
+        "mid": 2.8918636656875356,
+        "tail": 3.0215618159077047
+      },
+      "tokens_by_group": {
+        "head": 4636879,
+        "mid": 1210736,
+        "tail": 264641
+      },
+      "checkpoint": "runs\\smollm2\\random\\seed42\\model_last.pt",
+      "step": 3662,
+      "training_tokens": 59998208
+    },
+    "tail_aware": {
+      "overall": 2.8690899297195926,
+      "loss_by_group": {
+        "head": 2.8596002168197727,
+        "mid": 2.8791764126730373,
+        "tail": 2.989217130100795
+      },
+      "tokens_by_group": {
+        "head": 4636879,
+        "mid": 1210736,
+        "tail": 264641
+      },
+      "checkpoint": "runs\\smollm2\\tail_aware\\seed42\\model_last.pt",
+      "step": 3662,
+      "training_tokens": 59998208
+    }
+  }
+}

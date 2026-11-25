@@ -1,0 +1,104 @@
+{
+  "device": {
+    "name": "NVIDIA GeForce RTX 5050 Laptop GPU",
+    "total_memory_mb": 8123.4375,
+    "capability": "12.0",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0"
+  },
+  "equal_compute_mismatches": [],
+  "missing_instrumentation": [
+    "separate training and validation wall time per run",
+    "GPU utilization, power draw, and energy",
+    "torch.cuda.max_memory_reserved in addition to allocated",
+    "per-step latency distribution (only 10-step log rows exist)",
+    "CPU time, host RAM, and dataloader time",
+    "exact number of optimization steps in the final partial evaluation window"
+  ],
+  "estimates": {
+    "measured": {
+      "runs": 25,
+      "tokens_per_run": 59998208,
+      "steps_per_run": 3662,
+      "mean_wall_time_s": 720.5701122280018,
+      "mean_wall_time_min": 12.009501870466696,
+      "mean_tokens_per_s": 83265.38103257018,
+      "mean_peak_allocated_mb": 4703.0263671875,
+      "mean_eval_overhead_s": 16.427286399999065,
+      "wall_60m_arithmetic_s_at_mean_throughput": 720.5660654640016
+    },
+    "longer_training_120m": {
+      "label": "arithmetic estimate from measured mean throughput; no 120M run exists",
+      "wall_per_run_s": 1441.175174026534,
+      "wall_per_run_min": 24.019586233775566,
+      "wall_10_runs_h": 4.003264372295928,
+      "wall_15_runs_h": 6.004896558443892,
+      "wall_25_runs_h": 10.00816093073982
+    },
+    "model_scaling": {
+      "label": "parameter counts are exact; runtime and memory extrapolations are linear-scaling estimates and must be verified by a short pilot",
+      "candidates": [
+        {
+          "n_layer": 6,
+          "n_head": 6,
+          "n_embd": 384,
+          "block_size": 512,
+          "params": 17135616,
+          "params_millions": 17.135616,
+          "param_ratio_vs_current": 1.0,
+          "est_tokens_per_s_linear_param_scaling": 83265.38103257018,
+          "est_60m_wall_min_linear_param_scaling": 12.009793116887783,
+          "est_optimizer_param_state_mb": 274.169856
+        },
+        {
+          "n_layer": 8,
+          "n_head": 8,
+          "n_embd": 512,
+          "block_size": 512,
+          "params": 33870848,
+          "params_millions": 33.870848,
+          "param_ratio_vs_current": 1.9766343970359748,
+          "est_tokens_per_s_linear_param_scaling": 42124.82650176949,
+          "est_60m_wall_min_linear_param_scaling": 23.738970176126283,
+          "est_optimizer_param_state_mb": 541.933568
+        },
+        {
+          "n_layer": 9,
+          "n_head": 8,
+          "n_embd": 512,
+          "block_size": 512,
+          "params": 37023232,
+          "params_millions": 37.023232,
+          "param_ratio_vs_current": 2.160601171268077,
+          "est_tokens_per_s_linear_param_scaling": 38538.061600559515,
+          "est_60m_wall_min_linear_param_scaling": 25.948373075035033,
+          "est_optimizer_param_state_mb": 592.371712
+        },
+        {
+          "n_layer": 10,
+          "n_head": 8,
+          "n_embd": 512,
+          "block_size": 512,
+          "params": 40175616,
+          "params_millions": 40.175616,
+          "param_ratio_vs_current": 2.344567945500179,
+          "est_tokens_per_s_linear_param_scaling": 35514.16848139444,
+          "est_60m_wall_min_linear_param_scaling": 28.157775973943785,
+          "est_optimizer_param_state_mb": 642.809856
+        }
+      ],
+      "recommended_candidate": {
+        "n_layer": 9,
+        "n_head": 8,
+        "n_embd": 512,
+        "block_size": 512,
+        "params": 37023232,
+        "params_millions": 37.023232,
+        "param_ratio_vs_current": 2.160601171268077,
+        "est_tokens_per_s_linear_param_scaling": 38538.061600559515,
+        "est_60m_wall_min_linear_param_scaling": 25.948373075035033,
+        "est_optimizer_param_state_mb": 592.371712
+      }
+    }
+  }
+}

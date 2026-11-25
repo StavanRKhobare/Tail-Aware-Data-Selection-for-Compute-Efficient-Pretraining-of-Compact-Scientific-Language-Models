@@ -22,10 +22,10 @@ import config
 from select_subsets import STRATEGIES
 
 
-def encode(tok, texts, eot):
+def encode(tok, texts, eot, *, add_special_tokens=True):
     ids, lengths = [], []
     for i in range(0, len(texts), 10_000):
-        for e in tok.encode_batch(texts[i : i + 10_000]):
+        for e in tok.encode_batch(texts[i : i + 10_000], add_special_tokens=add_special_tokens):
             ids.append(np.asarray(e.ids + [eot], dtype=np.uint16))
             lengths.append(len(e.ids) + 1)
     return np.concatenate(ids), np.asarray(lengths, dtype=np.int64)

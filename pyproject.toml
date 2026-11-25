@@ -3,6 +3,8 @@ name = "nlp-el"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
     "datasets>=5.1.0",
     "huggingface-hub>=2.3.0",
     "matplotlib>=3.11.2",
@@ -12,9 +14,24 @@ dependencies = [
     "scikit-learn>=1.9.1",
     "tokenizers>=0.23.3",
     "tqdm>=4.70.1",
+    "torch>=2.14.1",
 ]
 
 [dependency-groups]
 dev = [
     "pytest>=9.2.0",
 ]
+train = [
+    "torch==2.14.1",
+]
+transfer = [
+    "transformers==5.24.0",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }

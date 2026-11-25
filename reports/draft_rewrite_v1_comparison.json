@@ -1,0 +1,83 @@
+[
+  {
+    "case": "missing_results",
+    "checkpoint": "draft_sft_v3",
+    "output": " Rare categories receive little training data\nAbstract: Rare categories receive little training data. Compare random and tail-aware selection. Compare random and tail-aware selection.",
+    "stop": "eos"
+  },
+  {
+    "case": "missing_results",
+    "checkpoint": "draft_rewrite_v1",
+    "output": " Problem: Rare categories receive little training data. In this paper, ar.",
+    "stop": "eos"
+  },
+  {
+    "case": "negative_result",
+    "checkpoint": "draft_sft_v3",
+    "output": " Rare categories receive little training data\nAbstract: Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection did not improve rare-topic loss.",
+    "stop": "eos"
+  },
+  {
+    "case": "negative_result",
+    "checkpoint": "draft_rewrite_v1",
+    "output": " Problem: Rare categories receive little training data. In this paper, Train a 17.1M parameter model for 60M tokens.",
+    "stop": "eos"
+  },
+  {
+    "case": "positive_result",
+    "checkpoint": "draft_sft_v3",
+    "output": " Rare categories receive little training data\nAbstract: Rare categories receive little training data. Train a 17.1M parameter model for 60M tokens. Tail-aware selection improved rare-topic loss.",
+    "stop": "eos"
+  },
+  {
+    "case": "positive_result",
+    "checkpoint": "draft_rewrite_v1",
+    "output": " Problem: Rare categories receive little training data. In this paper, train a 17.1M parameter model for 60M tokens.",
+    "stop": "eos"
+  },
+  {
+    "case": "numbers",
+    "checkpoint": "draft_sft_v3",
+    "output": " Classifier Evaluation\nAbstract: Evaluate a classifier. Use 800 training and 200 validation examples. Validation accuracy was 81.2%.",
+    "stop": "eos"
+  },
+  {
+    "case": "numbers",
+    "checkpoint": "draft_rewrite_v1",
+    "output": " Classifier Evaluation\nAbstract: In this paper, the Use 800 training and 200 validation examples. The use 800 training and 200 validation examples. The use 800 training and 200 validation examples. The use 800 training and 200 validation examples. The use 800 training and 200 validation examples. The use 800 training and 200 validation examples.",
+    "stop": "eos"
+  },
+  {
+    "case": "user_example",
+    "checkpoint": "draft_sft_v3",
+    "output": " Tail-Aware Data Selection for Compact Scientific Language Models\nAbstract: Small scientific language models may perform poorly on research topics that are underrepresented in research topics that are underrepresented in their training data. We compared random and tail-aware data selection using a 17.1-million-parameter Transformer. Each model was trained on 60 million tokens from scientific paper title summarization and abstracts, across five training seeds. Random selection achieved lower overall validation loss.",
+    "stop": "eos"
+  },
+  {
+    "case": "user_example",
+    "checkpoint": "draft_rewrite_v1",
+    "output": " Tail-Aware Data Selection for Compact Scientific Language Models\nAbstract: We compared random and tail-aware data selection using a 17.1-million-parameter Transformer. Each model was trained on a 60 million tokens from scientific paper titles and abstracts, across five training seeds. Each model was trained on a 60 million tokens from scientific paper titles and abstracts, across five training seeds. Each model was trained on a 60 million tokens from scientific paper titles and abstracts, across five training seeds.",
+    "stop": "eos"
+  },
+  {
+    "case": "2508.04469",
+    "checkpoint": "draft_rewrite_v1",
+    "reference": " FrEVL: Leveraging Frozen Pretrained Embeddings for Efficient Vision-Language Understanding\nAbstract: The deployment of vision-language models remains constrained by substantial computational requirements. We present \\textbf{FrEVL}, a framework exploring whether frozen pretrained embeddings can support effective vision-language understanding. Our analysis reveals that frozen embeddings contain rich information for discriminative tasks, achieving 85\\% to 95\\% of state-of-the-art performance on standard benchmarks with only 68.4M trainable parameters. This performance dichotomy reveals a critical insight: frozen embedding effectiveness depends on alignment between pretraining objectives and downstream task requirements. When accounting for end-to-end computation including embedding extraction, FrEVL provides $2.3\\times$ speedup with 52\\% lower energy consumption, making it suitable for scenarios with pre-computable inputs or when deployment constraints outweigh marginal performance gains. Our evaluation provides practitioners with guidance on when frozen embedding approaches represent viable alternatives to full model deployment. We will release our complete implementation and evaluation framework to facilitate further research into efficient multi-modal understanding.",
+    "output": " FrEVL: Leveraging Frozen Pretrained Embeddings for Efficient Vision-Language Understanding\nAbstract: The deployment of vision-language models remains constrained by substantial computational requirements. When accounting for end-to-end computation including embedding extraction, FrEVL provides $2.3\\times$ speedup with 52\\% lower energy consumption, making it suitable for scenarios with pre-computable inputs or when deployment constraints outweigh the marginal performance gains. We will release our complete implementation and evaluation framework to facilitate further research into efficient multi-modal understanding. Our evaluation provides practitioners with guidance on when frozen embedding approaches represent a viable alternatives to full model deployment. We will release our complete implementation and evaluation framework to facilitate further research into efficient multi-modal understanding. Our evaluation provides practitioners with guidance on when frozen embedding approaches represent a viable alternatives to full model deployment. We will release our complete implementation and evaluation framework to facilitate further research into efficient multi-modal understanding.",
+    "stop": "eos"
+  },
+  {
+    "case": "2003.12205",
+    "checkpoint": "draft_rewrite_v1",
+    "reference": " AirRL: A Reinforcement Learning Approach to Urban Air Quality Inference\nAbstract: Urban air pollution has become a major environmental problem that threatens public health. It has become increasingly important to infer fine-grained urban air quality based on existing monitoring stations. One of the challenges is how to effectively select some relevant stations for air quality inference. In this paper, we propose a novel model based on reinforcement learning for urban air quality inference. The model consists of two modules: a station selector and an air quality regressor. The station selector dynamically selects the most relevant monitoring stations when inferring air quality. The air quality regressor takes in the selected stations and makes air quality inference with deep neural network. We conduct experiments on a real-world air quality dataset and our approach achieves the highest performance compared with several popular solutions, and the experiments show significant effectiveness of proposed model in tackling problems of air quality inference.",
+    "output": " AirRL: A Reinforcement Learning Approach to Urban Air Quality Inference\nAbstract: Urban air pollution has become a major environmental problem that threatens the public health. The model consists of two modules: station the agent. It has become increasingly important to infer fine-grained urban air quality based on existing monitoring stations. In this paper, we propose a novel model based on reinforcement learning for urban air quality inference. It has become increasingly important to infer fine-grained urban air quality based on existing monitoring stations. It has become increasingly important to infer fine-grained urban air quality based on existing monitoring stations. It has become increasingly important to infer fine-grained urban air quality based on existing monitoring stations. It has become increasingly important to infer fine-grained urban air quality based on existing monitoring stations. It has become increasingly important to infer fine-grained urban air quality based on existing monitoring stations.",
+    "stop": "eos"
+  },
+  {
+    "case": "2211.12604",
+    "checkpoint": "draft_rewrite_v1",
+    "reference": " SuperTran: Reference Based Video Transformer for Enhancing Low Bitrate Streams in Real Time\nAbstract: This work focuses on low bitrate video streaming scenarios (e.g. 50 - 200Kbps) where the video quality is severely compromised. We present a family of novel deep generative models for enhancing perceptual video quality of such streams by performing super-resolution while also removing compression artifacts. Our model, which we call SuperTran, consumes as input a single high-quality, high-resolution reference images in addition to the low-quality, low-resolution video stream. The model thus learns how to borrow or copy visual elements like textures from the reference image and fill in the remaining details from the low resolution stream in order to produce perceptually enhanced output video. The reference frame can be sent once at the start of the video session or be retrieved from a gallery. Importantly, the resulting output has substantially better detail than what has been otherwise possible with methods that only use a low resolution input such as the SuperVEGAN method. SuperTran works in real-time (up to 30 frames/sec) on the cloud alongside standard pipelines.",
+    "output": " SuperTran: Reference Based Video Transformer for Enhancing Low Bitrate Streams in Real Time\nAbstract: SuperTran works in real-time (up to 30 frames/sec) on cloud alongside standard pipelines. The model thus learns how to borrow or copy visual elements like textures from the reference image and fill in the remaining details from the low resolution stream in order to produce perceptually enhanced output video. We present a family of novel deep generative models for enhancing the perceptual video quality of such streams by performing super-resolution while also removing the compression artifacts. Our model, which we call SuperTran, consumes as input a single high-quality, high-resolution reference images in addition to the low-quality, low-resolution video stream. Our model, which we call SuperTran, consumes as input a single high-quality, high-resolution reference images in addition to low-quality, low-resolution video stream. Our model, which we call SuperTran, consumes as input a single high-resolution reference images in addition to low-quality, low",
+    "stop": "max_new_tokens"
+  }
+]

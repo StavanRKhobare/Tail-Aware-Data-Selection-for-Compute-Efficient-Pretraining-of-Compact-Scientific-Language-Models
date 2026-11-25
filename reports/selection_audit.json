@@ -1,0 +1,118 @@
+{
+  "missing_artifacts": [
+    "data/selection/quality.parquet",
+    "data/selection/token_counts.parquet",
+    "data/selection/subsets/random.parquet"
+  ],
+  "definitions": {
+    "group": "head >= 10000 train docs per primary category, mid >= 1000, tail < 1000",
+    "quality": "graded product of penalties in src/quality.py; 1.0 = no heuristic issue",
+    "theme": "field `cluster` (0-99), hierarchical k-means on TF-IDF/SVD, fit on train only",
+    "tokens": "tokenizer ids plus one EOT per document (export_tokens.py)",
+    "jaccard": "|A intersect B| / |A union B| over document ids"
+  },
+  "inputs": {
+    "processed_train": "C:\\Users\\RYAN DAVE FERNANDES\\Desktop\\Tail-Aware-Data-Selection-for-Compute-Efficient-Pretraining-of-Compact-Scientific-Language-Models\\data\\processed\\train.parquet",
+    "topics": "C:\\Users\\RYAN DAVE FERNANDES\\Desktop\\Tail-Aware-Data-Selection-for-Compute-Efficient-Pretraining-of-Compact-Scientific-Language-Models\\data\\selection\\topics.parquet",
+    "manifests": "C:\\Users\\RYAN DAVE FERNANDES\\Desktop\\Tail-Aware-Data-Selection-for-Compute-Efficient-Pretraining-of-Compact-Scientific-Language-Models\\manifests",
+    "token_files": "C:\\Users\\RYAN DAVE FERNANDES\\Desktop\\Tail-Aware-Data-Selection-for-Compute-Efficient-Pretraining-of-Compact-Scientific-Language-Models\\data\\subsets",
+    "tokenizer": "C:\\Users\\RYAN DAVE FERNANDES\\Desktop\\Tail-Aware-Data-Selection-for-Compute-Efficient-Pretraining-of-Compact-Scientific-Language-Models\\tokenizer\\tokenizer.json"
+  },
+  "verification": {
+    "random": {
+      "manifest_docs": 121766,
+      "unique_manifest_ids": 121766,
+      "bin_docs": 121766,
+      "bin_tokens": 29999918,
+      "tokens_recomputed": 29999918,
+      "token_length_mismatches": 0,
+      "last_token_is_eot": true,
+      "double_eot_pairs": 0
+    },
+    "quality": {
+      "manifest_docs": 121486,
+      "unique_manifest_ids": 121486,
+      "bin_docs": 121486,
+      "bin_tokens": 29999935,
+      "tokens_recomputed": 29999935,
+      "token_length_mismatches": 0,
+      "last_token_is_eot": true,
+      "double_eot_pairs": 0
+    },
+    "diversity": {
+      "manifest_docs": 122526,
+      "unique_manifest_ids": 122526,
+      "bin_docs": 122526,
+      "bin_tokens": 29999698,
+      "tokens_recomputed": 29999698,
+      "token_length_mismatches": 0,
+      "last_token_is_eot": true,
+      "double_eot_pairs": 0
+    },
+    "tail_aware": {
+      "manifest_docs": 120408,
+      "unique_manifest_ids": 120408,
+      "bin_docs": 120408,
+      "bin_tokens": 29999918,
+      "tokens_recomputed": 29999918,
+      "token_length_mismatches": 0,
+      "last_token_is_eot": true,
+      "double_eot_pairs": 0
+    },
+    "tail_only": {
+      "manifest_docs": 120859,
+      "unique_manifest_ids": 120859,
+      "bin_docs": 120859,
+      "bin_tokens": 29999854,
+      "tokens_recomputed": 29999854,
+      "token_length_mismatches": 0,
+      "last_token_is_eot": true,
+      "double_eot_pairs": 0
+    }
+  },
+  "corpus": {
+    "docs": 440584,
+    "tokens": 108540610,
+    "text_tokens": 108100026,
+    "eot_tokens": 440584,
+    "mean_tokens_per_doc": 246.35622264993737,
+    "mean_quality_score": 0.9625377606276259,
+    "exact_duplicate_text_docs": 0,
+    "group_docs": {
+      "head": 332367,
+      "mid": 88242,
+      "tail": 19975
+    },
+    "group_tokens": {
+      "head": 81249594,
+      "mid": 22329365,
+      "tail": 4961651
+    }
+  },
+  "comparisons": {
+    "quality_vs_random": {
+      "mean_quality_diff": 0.01981999999999995,
+      "pct_low_quality_diff": -2.657,
+      "tail_token_share_diff": -0.0001270259883410299,
+      "quality_only_docs": 3078,
+      "random_only_docs": 3358,
+      "quality_only_mean_score": 0.9820345477993703,
+      "random_only_mean_score": 0.2632960786433489
+    },
+    "tail_aware_vs_random": {
+      "tail_doc_share_diff": 0.11452095034190936,
+      "tail_token_share_diff": 0.11517688148347605,
+      "head_token_share_diff": -0.3594611491938077
+    },
+    "tail_only_vs_tail_aware": {
+      "tail_doc_share_diff": 0.005626501512417642,
+      "tail_token_share_diff": 0.004811932597745955,
+      "mean_quality_diff": -0.021260000000000057
+    },
+    "diversity_vs_quality": {
+      "theme_tokens_effective_diff": 2.031000000000006,
+      "themes_covered_diff": 0,
+      "min_theme_tokens_diff": -10504
+    }
+  }
+}

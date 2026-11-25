@@ -63,6 +63,31 @@ MINHASH_PERMS = 128
 MINHASH_BANDS = 32          # 32 bands x 4 rows -> candidate threshold ~0.42
 DUP_JACCARD = 0.5           # verified estimated Jaccard to call two abstracts the same work
 
+# ---------------------------------------------------------------------------
+# Part 3: compact Transformer training
+# ---------------------------------------------------------------------------
+RUNS_DIR = ROOT / "runs"
+
+PART3_BLOCK_SIZE = 512
+PART3_N_LAYER = 6
+PART3_N_HEAD = 6
+PART3_N_EMBD = 384
+PART3_DROPOUT = 0.0
+
+PART3_MAX_TOKENS = 60_000_000
+PART3_BATCH_SIZE = 32
+PART3_GRAD_ACCUM = 1
+PART3_LR = 6e-4
+PART3_MIN_LR_RATIO = 0.1
+PART3_WARMUP_FRAC = 0.02
+PART3_WEIGHT_DECAY = 0.1
+PART3_GRAD_CLIP = 1.0
+
+PART3_EVAL_EVERY = 250
+PART3_LOG_EVERY = 10
+PART3_SAVE_EVERY = 500
+PART3_SEEDS = (42, 43)
+
 
 def ensure_dirs():
     for d in (RAW_DIR, INTERIM_DIR, PROCESSED_DIR, REPORTS_DIR, FIG_DIR,

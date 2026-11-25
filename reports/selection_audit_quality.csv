@@ -1,0 +1,7 @@
+strategy,quality_missing,quality_mean,quality_median,quality_p10,quality_p90,quality_pct_perfect,quality_pct_below_min,quality_pct_below_0_9
+full_train,0,0.96254,1.0,0.93,1.0,88.239,2.605,9.298
+random,0,0.96216,1.0,0.925,1.0,88.161,2.657,9.439
+quality,0,0.98198,1.0,1.0,1.0,90.564,0.0,6.963
+diversity,0,0.98108,1.0,1.0,1.0,90.154,0.0,7.263
+tail_aware,0,0.98084,1.0,0.99874,1.0,89.973,0.0,7.25
+tail_only,0,0.95958,1.0,0.90008,1.0,87.426,2.848,9.887
